@@ -1,0 +1,35 @@
+/* RTL Overrides */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] h1, 
+[dir="rtl"] h2, 
+[dir="rtl"] h3, 
+[dir="rtl"] h4, 
+[dir="rtl"] h5, 
+[dir="rtl"] h6,
+[dir="rtl"] p {
+    text-align: center; /* Per Step 3: ALL section headings and subtext center aligned */
+}
+
+[dir="rtl"] .footer-col h4 {
+    text-align: right;
+}
+
+[dir="rtl"] .nav-actions {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .drawer {
+    left: -320px;
+    right: auto;
+}
+
+[dir="rtl"] .drawer.open {
+    transform: translateX(320px);
+}
+
+[dir="rtl"] .drawer-close {
+    align-self: flex-start;
+}

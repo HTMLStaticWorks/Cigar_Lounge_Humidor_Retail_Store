@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smokey | Bourbon & Broadleaf Tasting</title>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">SMOKEY</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home2.html" class="nav-link">Home 2</a>
+                <a href="cigars.html" class="nav-link">Cigars</a>
+                <a href="accessories.html" class="nav-link">Accessories</a>
+                <a href="membership.html" class="nav-link">Membership</a>
+                <a href="events.html" class="nav-link active">Events</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle"><i class="ph ph-moon"></i></button>
+                <button class="rtl-toggle"><i class="ph ph-arrows-left-right"></i></button>
+                <a href="login.html" class="btn login-btn">Login</a>
+                <button class="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Drawer -->
+    <div class="drawer-overlay"></div>
+    <div class="drawer">
+        <button class="drawer-close"><i class="ph ph-x"></i></button>
+        <div class="drawer-links">
+            <a href="index.html" class="drawer-link">Home</a>
+            <a href="home2.html" class="drawer-link">Home 2</a>
+            <a href="cigars.html" class="drawer-link">Cigars</a>
+            <a href="accessories.html" class="drawer-link">Accessories</a>
+            <a href="membership.html" class="drawer-link">Membership</a>
+            <a href="events.html" class="drawer-link">Events</a>
+            <a href="blog.html" class="drawer-link">Blog</a>
+            <a href="contact.html" class="drawer-link">Contact</a>
+            <a href="login.html" class="drawer-link">Login</a>
+        </div>
+        <div class="drawer-footer">
+            <button class="theme-toggle"><i class="ph ph-moon"></i></button>
+            <button class="rtl-toggle"><i class="ph ph-arrows-left-right"></i></button>
+        </div>
+    </div>
+
+    <main>
+        <article style="padding: 120px 0;">
+            <div class="container">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div style="text-align: center; margin-bottom: 40px;">
+                        <span style="color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Exclusive Masterclass</span>
+                        <h1 style="font-size: clamp(32px, 5vw, 56px); margin-top: 15px;">Bourbon & Broadleaf: A Deep Dive</h1>
+                        <div style="display: flex; justify-content: center; gap: 30px; margin-top: 20px; font-weight: 600;">
+                            <span><i class="ph ph-calendar"></i> May 15, 2026</span>
+                            <span><i class="ph ph-clock"></i> 7:00 PM - 9:30 PM</span>
+                            <span><i class="ph ph-map-pin"></i> The Reserve Suite</span>
+                        </div>
+                    </div>
+                    
+                    <img src="https://images.unsplash.com/photo-1542451313-0752ee2fe83d?q=80&w=1200" style="width: 100%; height: 500px; object-fit: cover; border-radius: var(--radius); margin-bottom: 60px;">
+                    
+                    <div style="font-size: 20px; line-height: 1.8;">
+                        <p style="text-align: left; margin: 0 0 30px 0;">Join our resident sommelier and humidor manager for an evening dedicated to the rich, earthy complexity of broadleaf wrappers. Often misunderstood but highly prized by connoisseurs, the broadleaf wrapper provides the backbone for some of the world's most legendary cigars.</p>
+                        
+                        <h2 style="text-align: left; margin: 40px 0 20px 0;">What to Expect</h2>
+                        <ul style="margin-bottom: 40px; text-align: left; list-style: disc; padding-left: 20px;">
+                            <li style="margin-bottom: 10px;">A tasting flight of three premium Nicaraguan broadleaf cigars.</li>
+                            <li style="margin-bottom: 10px;">Pairing sessions with four aged Kentucky straight bourbons.</li>
+                            <li style="margin-bottom: 10px;">Detailed discussion on the fermentation process of broadleaf tobacco.</li>
+                            <li style="margin-bottom: 10px;">Complimentary cedar spill lighting for all participants.</li>
+                        </ul>
+
+                        <div style="background: var(--surface); padding: 40px; border-radius: var(--radius); border: 1px solid var(--accent); margin: 60px 0;">
+                            <h3 style="margin-bottom: 25px;">Reserve Your Seat</h3>
+                            <form id="rsvpForm">
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                                    <input type="text" placeholder="Name" required style="padding: 15px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); color: var(--text);">
+                                    <input type="email" placeholder="Email" required style="padding: 15px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); color: var(--text);">
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    <select required style="width: 100%; padding: 15px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); color: var(--text);">
+                                        <option value="">Select Membership Status</option>
+                                        <option>Non-Member ($75)</option>
+                                        <option>Social Member ($50)</option>
+                                        <option>Connoisseur Member (Free)</option>
+                                        <option>Private Reserve Member (Free)</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-primary" style="width: 100%; padding: 15px;">Submit RSVP</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Smokey Cigar Lounge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

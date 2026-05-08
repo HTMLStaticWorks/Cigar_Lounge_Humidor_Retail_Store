@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smokey | The Executive Lounge (Home 2)</title>
+    <meta name="description" content="Discover the Smokey difference. A luxury retreat for the modern connoisseur.">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">SMOKEY</a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home2.html" class="nav-link active">Home 2</a>
+                <a href="cigars.html" class="nav-link">Cigars</a>
+                <a href="accessories.html" class="nav-link">Accessories</a>
+                <a href="membership.html" class="nav-link">Membership</a>
+                <a href="events.html" class="nav-link">Events</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Theme"><i class="ph ph-moon"></i></button>
+                <button class="rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+                <a href="login.html" class="btn login-btn">Login</a>
+                <button class="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Drawer (Shared logic with index) -->
+    <div class="drawer-overlay"></div>
+    <div class="drawer">
+        <button class="drawer-close"><i class="ph ph-x"></i></button>
+        <div class="drawer-links">
+            <a href="index.html" class="drawer-link">Home</a>
+            <a href="home2.html" class="drawer-link">Home 2</a>
+            <a href="cigars.html" class="drawer-link">Cigars</a>
+            <a href="accessories.html" class="drawer-link">Accessories</a>
+            <a href="membership.html" class="drawer-link">Membership</a>
+            <a href="events.html" class="drawer-link">Events</a>
+            <a href="blog.html" class="drawer-link">Blog</a>
+            <a href="contact.html" class="drawer-link">Contact</a>
+            <a href="login.html" class="drawer-link">Login</a>
+        </div>
+        <div class="drawer-footer">
+            <button class="theme-toggle"><i class="ph ph-moon"></i></button>
+            <button class="rtl-toggle"><i class="ph ph-arrows-left-right"></i></button>
+        </div>
+    </div>
+
+    <main>
+        <!-- Split Hero Section -->
+        <section class="split-hero" style="padding: 0; min-height: 100vh; display: flex; align-items: stretch; overflow: hidden;">
+            <div class="hero-content" style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 100px 10%; background: var(--bg);">
+                <div class="animate-on-scroll">
+                    <h1 style="text-align: left; font-size: clamp(32px, 6vw, 64px); line-height: 1.1; margin-bottom: 30px;">Refining the <br><span style="color: var(--accent);">Ritual of Relaxation</span></h1>
+                    <p style="text-align: left; margin: 0 0 40px 0; font-size: 22px; max-width: 500px;">A private club atmosphere designed for those who appreciate the finer details of life.</p>
+                    <div style="display: flex; gap: 20px;">
+                        <a href="membership.html" class="btn btn-primary">Join the Elite</a>
+                        <a href="cigars.html" class="btn btn-outline">Browse Humidor</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image" style="flex: 1; background: url('https://images.unsplash.com/photo-1595113316349-9fa4ee24f884?q=80&w=1200&auto=format&fit=crop'); background-size: cover; background-position: center;"></div>
+        </section>
+
+        <!-- Stats Section (New for Home 2) -->
+        <section style="background: var(--surface); padding: 60px 0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: center;">
+                    <div>
+                        <div style="font-family: var(--font-heading); font-size: 48px; color: var(--accent); font-weight: 700;">500+</div>
+                        <div style="text-transform: uppercase; font-size: 14px; letter-spacing: 2px;">Cigar Varieties</div>
+                    </div>
+                    <div>
+                        <div style="font-family: var(--font-heading); font-size: 48px; color: var(--accent); font-weight: 700;">120</div>
+                        <div style="text-transform: uppercase; font-size: 14px; letter-spacing: 2px;">Private Humidors</div>
+                    </div>
+                    <div>
+                        <div style="font-family: var(--font-heading); font-size: 48px; color: var(--accent); font-weight: 700;">15+</div>
+                        <div style="text-transform: uppercase; font-size: 14px; letter-spacing: 2px;">Years Excellence</div>
+                    </div>
+                    <div>
+                        <div style="font-family: var(--font-heading); font-size: 48px; color: var(--accent); font-weight: 700;">3</div>
+                        <div style="text-transform: uppercase; font-size: 14px; letter-spacing: 2px;">Lounge Zones</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Highlight (Different Layout) -->
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <h2>The Humidor Selection</h2>
+                    <p>Curated by our resident connoisseurs for the most discerning palates.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
+                    <div class="highlight-card" style="position: relative; overflow: hidden; border-radius: var(--radius); height: 500px;">
+                        <img src="https://images.unsplash.com/photo-1621644782052-19e34e5a9757?q=80&w=800&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: #FFFFFF;">
+                            <h3 style="text-align: left; color: #FFFFFF;">Rare Nicaraguan Blends</h3>
+                            <p style="text-align: left; color: #CCCCCC; margin: 10px 0 20px 0;">Exclusive small-batch arrivals from the valley of Estelí.</p>
+                            <a href="cigars.html" class="btn btn-primary" style="padding: 8px 20px;">Explore</a>
+                        </div>
+                    </div>
+                    <div class="highlight-card" style="position: relative; overflow: hidden; border-radius: var(--radius); height: 500px;">
+                        <img src="https://images.unsplash.com/photo-1542451313-0752ee2fe83d?q=80&w=800&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: #FFFFFF;">
+                            <h3 style="text-align: left; color: #FFFFFF;">Premium Accessories</h3>
+                            <p style="text-align: left; color: #CCCCCC; margin: 10px 0 20px 0;">Handcrafted cutters and lighters that define luxury.</p>
+                            <a href="accessories.html" class="btn btn-primary" style="padding: 8px 20px;">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter / Community Section -->
+        <section style="background: var(--text); color: var(--bg); padding: 100px 0;">
+            <div class="container animate-on-scroll">
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <h2 style="color: var(--bg); font-size: 48px;">Stay in the Smoke</h2>
+                    <p style="color: var(--surface); margin-bottom: 40px;">Join our inner circle for early access to limited edition releases and private member events.</p>
+                    <form style="display: flex; gap: 15px; max-width: 600px; margin: 0 auto;">
+                        <input type="email" placeholder="Email Address" required style="flex-grow: 1; padding: 15px 25px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #FFFFFF;">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as index for consistency) -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">SMOKEY</a>
+                    <p style="text-align: left; margin: 0; font-size: 16px; color: #CCCCCC;">A premier destination for cigar enthusiasts, offering a curated selection of premium tobacco and a luxury lounge experience.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cigars.html">Cigars</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links" style="color: #CCCCCC; font-size: 16px;">
+                        <li><i class="ph ph-map-pin"></i> 123 Cedar Street, Bourbon Heights</li>
+                        <li><i class="ph ph-phone"></i> (555) 123-4567</li>
+                        <li><i class="ph ph-envelope"></i> lounge@smokey.com</li>
+                        <li><i class="ph ph-clock"></i> Mon-Sun: 10AM - 12AM</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p style="text-align: left; margin: 0; font-size: 14px; color: #CCCCCC; margin-bottom: 15px;">Subscribe for exclusive event invites and new arrivals.</p>
+                    <form style="display: flex; gap: 10px;">
+                        <input type="email" placeholder="Your Email" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #FFFFFF; padding: 10px; border-radius: var(--radius); flex-grow: 1;">
+                        <button class="btn btn-primary" style="padding: 10px 15px;"><i class="ph ph-paper-plane-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="font-size: 14px; color: #888888;">&copy; 2026 Smokey Cigar Lounge. All rights reserved. | <a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

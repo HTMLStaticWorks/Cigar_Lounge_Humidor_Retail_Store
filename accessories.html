@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smokey | Premium Accessories</title>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <style>
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+        .tab-btn {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-family: var(--font-heading);
+            font-size: 14px;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--accent);
+            color: var(--black);
+            border-color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">SMOKEY</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home2.html" class="nav-link">Home 2</a>
+                <a href="cigars.html" class="nav-link">Cigars</a>
+                <a href="accessories.html" class="nav-link active">Accessories</a>
+                <a href="membership.html" class="nav-link">Membership</a>
+                <a href="events.html" class="nav-link">Events</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle"><i class="ph ph-moon"></i></button>
+                <button class="rtl-toggle"><i class="ph ph-arrows-left-right"></i></button>
+                <a href="login.html" class="btn login-btn">Login</a>
+                <button class="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Drawer -->
+    <div class="drawer-overlay"></div>
+    <div class="drawer">
+        <button class="drawer-close"><i class="ph ph-x"></i></button>
+        <div class="drawer-links">
+            <a href="index.html" class="drawer-link">Home</a>
+            <a href="home2.html" class="drawer-link">Home 2</a>
+            <a href="cigars.html" class="drawer-link">Cigars</a>
+            <a href="accessories.html" class="drawer-link">Accessories</a>
+            <a href="membership.html" class="drawer-link">Membership</a>
+            <a href="events.html" class="drawer-link">Events</a>
+            <a href="blog.html" class="drawer-link">Blog</a>
+            <a href="contact.html" class="drawer-link">Contact</a>
+            <a href="login.html" class="drawer-link">Login</a>
+        </div>
+        <div class="drawer-footer">
+            <button class="theme-toggle"><i class="ph ph-moon"></i></button>
+            <button class="rtl-toggle"><i class="ph ph-arrows-left-right"></i></button>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-header" style="background: var(--surface); padding: 120px 0 60px;">
+            <div class="container">
+                <h1>Gentleman's Accoutrements</h1>
+                <p>The finest tools for the perfect ritual. Handpicked for quality and durability.</p>
+            </div>
+        </section>
+
+        <section style="padding: 40px 0;">
+            <div class="container">
+                <!-- Category Tabs -->
+                <div class="category-tabs">
+                    <button class="tab-btn active">All Items</button>
+                    <button class="tab-btn">Cutters</button>
+                    <button class="tab-btn">Lighters</button>
+                    <button class="tab-btn">Cases</button>
+                    <button class="tab-btn">Ashtrays</button>
+                    <button class="tab-btn">Humidors</button>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <!-- Accessory 1 -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1621644783321-4ba29c016e7f?q=80&w=600" alt="Cutter" style="height: 250px; width: 100%; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
+                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Xikar | Cutters</span>
+                        <h3>Xikar Xi3 Damascus</h3>
+                        <p style="font-size: 15px;">Precision-forged Damascus steel with a mirror finish.</p>
+                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$349.00</div>
+                        <button class="btn btn-primary" style="width: 100%;">Add to Pickup Cart</button>
+                    </div>
+                    <!-- Accessory 2 -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1542451313-0752ee2fe83d?q=80&w=600" alt="Lighter" style="height: 250px; width: 100%; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
+                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">S.T. Dupont | Lighters</span>
+                        <h3>Ligne 2 Gold Plated</h3>
+                        <p style="font-size: 15px;">The iconic 'cling' sound. Timeless French craftsmanship.</p>
+                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$895.00</div>
+                        <button class="btn btn-primary" style="width: 100%;">Add to Pickup Cart</button>
+                    </div>
+                    <!-- Accessory 3 -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1595113316349-9fa4ee24f884?q=80&w=600" alt="Humidor" style="height: 250px; width: 100%; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
+                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Elie Bleu | Humidors</span>
+                        <h3>Medalist Sycamore 110</h3>
+                        <p style="font-size: 15px;">Spanish cedar interior. Masterpiece of French joinery.</p>
+                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$2,450.00</div>
+                        <button class="btn btn-primary" style="width: 100%;">Add to Pickup Cart</button>
+                    </div>
+                    <!-- Accessory 4 -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1598006520336-39f5c490892f?q=80&w=600" alt="Ashtray" style="height: 250px; width: 100%; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
+                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Colibri | Ashtrays</span>
+                        <h3>Colibri Quasar Crystal</h3>
+                        <p style="font-size: 15px;">Lead-free crystal. Modern geometric design.</p>
+                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$125.00</div>
+                        <button class="btn btn-primary" style="width: 100%;">Add to Pickup Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">SMOKEY</a>
+                    <p style="text-align: left; margin: 0; font-size: 16px; color: #CCCCCC;">A premier destination for cigar enthusiasts, offering a curated selection of premium tobacco and a luxury lounge experience.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cigars.html">Cigars</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links" style="color: #CCCCCC; font-size: 16px;">
+                        <li><i class="ph ph-map-pin"></i> 123 Cedar Street, Bourbon Heights</li>
+                        <li><i class="ph ph-phone"></i> (555) 123-4567</li>
+                        <li><i class="ph ph-envelope"></i> lounge@smokey.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p style="text-align: left; margin: 0; font-size: 14px; color: #CCCCCC; margin-bottom: 15px;">Subscribe for exclusive event invites and new arrivals.</p>
+                    <form style="display: flex; gap: 10px;">
+                        <input type="email" placeholder="Your Email" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #FFFFFF; padding: 10px; border-radius: var(--radius); flex-grow: 1;">
+                        <button class="btn btn-primary" style="padding: 10px 15px;"><i class="ph ph-paper-plane-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="font-size: 14px; color: #888888;">&copy; 2026 Smokey Cigar Lounge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Category filtering logic placeholder
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelector('.tab-btn.active').classList.remove('active');
+                btn.classList.add('active');
+                // Filter logic would go here
+            });
+        });
+    </script>
+</body>
+</html>

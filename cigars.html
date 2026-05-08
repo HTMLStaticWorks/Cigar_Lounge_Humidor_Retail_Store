@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smokey | Cigar Collection</title>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <style>
+        .filter-bar {
+            background: var(--surface);
+            padding: 20px;
+            border-radius: var(--radius);
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .filter-select {
+            padding: 8px 15px;
+            border: 1px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            border-radius: var(--radius);
+            font-family: var(--font-body);
+        }
+        .pickup-cart {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent);
+            color: var(--black);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 10px 30px rgba(184, 151, 58, 0.4);
+            cursor: pointer;
+            z-index: 900;
+        }
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--text);
+            color: var(--bg);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .order-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+        .modal-content {
+            background: var(--bg);
+            padding: 40px;
+            border-radius: var(--radius);
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--surface);
+            color: var(--text);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">SMOKEY</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home2.html" class="nav-link">Home 2</a>
+                <a href="cigars.html" class="nav-link active">Cigars</a>
+                <a href="accessories.html" class="nav-link">Accessories</a>
+                <a href="membership.html" class="nav-link">Membership</a>
+                <a href="events.html" class="nav-link">Events</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle"><i class="ph ph-moon"></i></button>
+                <button class="rtl-toggle"><i class="ph ph-arrows-left-right"></i></button>
+                <a href="login.html" class="btn login-btn">Login</a>
+                <button class="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Drawer -->
+    <div class="drawer-overlay"></div>
+    <div class="drawer">
+        <button class="drawer-close"><i class="ph ph-x"></i></button>
+        <div class="drawer-links">
+            <a href="index.html" class="drawer-link">Home</a>
+            <a href="home2.html" class="drawer-link">Home 2</a>
+            <a href="cigars.html" class="drawer-link">Cigars</a>
+            <a href="accessories.html" class="drawer-link">Accessories</a>
+            <a href="membership.html" class="drawer-link">Membership</a>
+            <a href="events.html" class="drawer-link">Events</a>
+            <a href="blog.html" class="drawer-link">Blog</a>
+            <a href="contact.html" class="drawer-link">Contact</a>
+            <a href="login.html" class="drawer-link">Login</a>
+        </div>
+        <div class="drawer-footer">
+            <button class="theme-toggle"><i class="ph ph-moon"></i></button>
+            <button class="rtl-toggle"><i class="ph ph-arrows-left-right"></i></button>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-header" style="background: var(--surface); padding: 120px 0 60px;">
+            <div class="container">
+                <h1>Cigar Collection</h1>
+                <p>Browse our extensive selection of premium hand-rolled cigars available for local pickup.</p>
+            </div>
+        </section>
+
+        <section style="padding: 40px 0;">
+            <div class="container">
+                <!-- Filter Bar -->
+                <div class="filter-bar">
+                    <div class="filter-group">
+                        <label>Origin:</label>
+                        <select class="filter-select">
+                            <option>All Origins</option>
+                            <option>Nicaragua</option>
+                            <option>Dominican Republic</option>
+                            <option>Honduras</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Strength:</label>
+                        <select class="filter-select">
+                            <option>All Strengths</option>
+                            <option>Mild</option>
+                            <option>Medium</option>
+                            <option>Full</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Wrapper:</label>
+                        <select class="filter-select">
+                            <option>All Wrappers</option>
+                            <option>Maduro</option>
+                            <option>Connecticut</option>
+                            <option>Habano</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Price:</label>
+                        <select class="filter-select">
+                            <option>All Prices</option>
+                            <option>$10 - $20</option>
+                            <option>$20 - $40</option>
+                            <option>$40+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <!-- Card 1 -->
+                    <div class="card product-card">
+                        <img src="https://images.unsplash.com/photo-1621644782052-19e34e5a9757?q=80&w=600" alt="Cigar" style="height: 250px; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
+                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Nicaragua | Medium-Full</span>
+                        <h3>Padrón Family Reserve</h3>
+                        <p style="font-size: 15px;">A rich, complex profile with notes of cocoa and espresso.</p>
+                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$32.00</div>
+                        <button class="btn btn-primary add-to-pickup" style="width: 100%;">Order for Pickup</button>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card product-card">
+                        <img src="https://images.unsplash.com/photo-1598006520336-39f5c490892f?q=80&w=600" alt="Cigar" style="height: 250px; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
+                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Dominican | Mild</span>
+                        <h3>Davidoff Grand Cru</h3>
+                        <p style="font-size: 15px;">Elegant and refined with a smooth, woody finish.</p>
+                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$24.50</div>
+                        <button class="btn btn-primary add-to-pickup" style="width: 100%;">Order for Pickup</button>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card product-card">
+                        <img src="https://images.unsplash.com/photo-1621644783321-4ba29c016e7f?q=80&w=600" alt="Cigar" style="height: 250px; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
+                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Honduras | Full</span>
+                        <h3>Rocky Patel Decade</h3>
+                        <p style="font-size: 15px;">Robust and earthy with a perfect draw every time.</p>
+                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$18.00</div>
+                        <button class="btn btn-primary add-to-pickup" style="width: 100%;">Order for Pickup</button>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="card product-card">
+                        <img src="https://images.unsplash.com/photo-1595113316349-9fa4ee24f884?q=80&w=600" alt="Cigar" style="height: 250px; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
+                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Nicaragua | Full</span>
+                        <h3>Oliva Serie V Melanio</h3>
+                        <p style="font-size: 15px;">Award-winning blend with deep, spicy undertones.</p>
+                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$15.50</div>
+                        <button class="btn btn-primary add-to-pickup" style="width: 100%;">Order for Pickup</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pickup Cart Toggle -->
+    <div class="pickup-cart" id="cartToggle">
+        <i class="ph ph-shopping-bag"></i>
+        <span class="cart-count">0</span>
+    </div>
+
+    <!-- Order Modal -->
+    <div class="order-modal" id="orderModal">
+        <div class="modal-content">
+            <button id="closeModal" style="position: absolute; top: 15px; right: 15px; background: none; font-size: 20px; color: var(--text);"><i class="ph ph-x"></i></button>
+            <h2 style="text-align: left; margin-bottom: 10px;">Local Pickup Order</h2>
+            <p style="text-align: left; font-size: 15px; margin-bottom: 30px;">Complete your reservation. We'll have your selection ready at the lounge.</p>
+            
+            <div id="cartItems" style="margin-bottom: 25px; max-height: 150px; overflow-y: auto; border-bottom: 1px solid var(--border); padding-bottom: 15px;">
+                <!-- Cart items will appear here -->
+            </div>
+
+            <form id="pickupForm">
+                <!-- PICKUP_BACKEND_ENDPOINT -->
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number *</label>
+                    <input type="tel" placeholder="(555) 000-0000" required>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Pickup Time *</label>
+                    <select required>
+                        <option value="">Select a time slot</option>
+                        <option>Today, 2:00 PM - 4:00 PM</option>
+                        <option>Today, 4:00 PM - 6:00 PM</option>
+                        <option>Today, 6:00 PM - 8:00 PM</option>
+                        <option>Tomorrow, 10:00 AM - 12:00 PM</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">SMOKEY</a>
+                    <p style="text-align: left; margin: 0; font-size: 16px; color: #CCCCCC;">A premier destination for cigar enthusiasts, offering a curated selection of premium tobacco and a luxury lounge experience.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cigars.html">Cigars</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links" style="color: #CCCCCC; font-size: 16px;">
+                        <li><i class="ph ph-map-pin"></i> 123 Cedar Street, Bourbon Heights</li>
+                        <li><i class="ph ph-phone"></i> (555) 123-4567</li>
+                        <li><i class="ph ph-envelope"></i> lounge@smokey.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p style="text-align: left; margin: 0; font-size: 14px; color: #CCCCCC; margin-bottom: 15px;">Subscribe for exclusive event invites and new arrivals.</p>
+                    <form style="display: flex; gap: 10px;">
+                        <input type="email" placeholder="Your Email" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #FFFFFF; padding: 10px; border-radius: var(--radius); flex-grow: 1;">
+                        <button class="btn btn-primary" style="padding: 10px 15px;"><i class="ph ph-paper-plane-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="font-size: 14px; color: #888888;">&copy; 2026 Smokey Cigar Lounge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Pickup Cart Logic
+        let cart = [];
+        const cartToggle = document.getElementById('cartToggle');
+        const cartCount = document.querySelector('.cart-count');
+        const orderModal = document.getElementById('orderModal');
+        const closeModal = document.getElementById('closeModal');
+        const cartItemsDiv = document.getElementById('cartItems');
+
+        document.querySelectorAll('.add-to-pickup').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const card = e.target.closest('.card');
+                const name = card.querySelector('h3').innerText;
+                const price = card.querySelector('div').innerText;
+                
+                cart.push({ name, price });
+                updateCart();
+                
+                // Visual feedback
+                const originalText = btn.innerText;
+                btn.innerText = 'Added!';
+                btn.style.background = '#28a745';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        });
+
+        function updateCart() {
+            cartCount.innerText = cart.length;
+            cartItemsDiv.innerHTML = cart.map(item => `
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px;">
+                    <span>${item.name}</span>
+                    <strong>${item.price}</strong>
+                </div>
+            `).join('') || '<p style="text-align: center; color: #888;">Your selection is empty</p>';
+        }
+
+        cartToggle.addEventListener('click', () => {
+            orderModal.style.display = 'flex';
+        });
+
+        closeModal.addEventListener('click', () => {
+            orderModal.style.display = 'none';
+        });
+
+        window.onclick = (e) => {
+            if (e.target == orderModal) orderModal.style.display = 'none';
+        };
+
+        document.getElementById('pickupForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (cart.length === 0) {
+                alert('Please add items to your selection first.');
+                return;
+            }
+            // Backend placeholder logic
+            const successMsg = document.createElement('div');
+            successMsg.style.textAlign = 'center';
+            successMsg.style.padding = '20px';
+            successMsg.innerHTML = `
+                <i class="ph ph-check-circle" style="font-size: 48px; color: #28a745; margin-bottom: 15px; display: block;"></i>
+                <h3>Order Confirmed!</h3>
+                <p>We'll have your selection ready. See you at the lounge!</p>
+            `;
+            document.querySelector('.modal-content').innerHTML = '';
+            document.querySelector('.modal-content').appendChild(successMsg);
+            
+            cart = [];
+            updateCart();
+            setTimeout(() => {
+                orderModal.style.display = 'none';
+                location.reload();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Smokey</title>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1542451313-0752ee2fe83d?q=80&w=2000') no-repeat center center;
+            background-size: cover;
+            color: #FFFFFF;
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 50px 0;
+        }
+        .count-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .count-num {
+            font-size: clamp(32px, 8vw, 64px);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .count-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #888;
+        }
+        .email-capture {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .logo-large {
+            font-family: var(--font-heading);
+            font-size: 64px;
+            font-weight: 900;
+            color: var(--accent);
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-large">SMOKEY</div>
+        <h2>Something exquisite is aging...</h2>
+        <p style="color: #CCCCCC;">We are preparing our master humidor for the grand opening. Stay tuned.</p>
+        
+        <div class="countdown">
+            <div class="count-item">
+                <span class="count-num" id="days">24</span>
+                <span class="count-label">Days</span>
+            </div>
+            <div class="count-item">
+                <span class="count-num" id="hours">12</span>
+                <span class="count-label">Hours</span>
+            </div>
+            <div class="count-item">
+                <span class="count-num" id="mins">45</span>
+                <span class="count-label">Minutes</span>
+            </div>
+            <div class="count-item">
+                <span class="count-num" id="secs">08</span>
+                <span class="count-label">Seconds</span>
+            </div>
+        </div>
+
+        <div class="email-capture">
+            <p style="margin-bottom: 20px; font-size: 14px;">Join the waitlist for private founding membership invitations.</p>
+            <form style="display: flex; gap: 10px;">
+                <input type="email" placeholder="Email Address" required style="flex-grow: 1; padding: 15px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #FFFFFF;">
+                <button class="btn btn-primary">Notify Me</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Simple countdown logic
+        let countDate = new Date().getTime() + (24 * 60 * 60 * 1000 * 24); // 24 days from now
+        
+        setInterval(() => {
+            let now = new Date().getTime();
+            let gap = countDate - now;
+            
+            let second = 1000;
+            let minute = second * 60;
+            let hour = minute * 60;
+            let day = hour * 24;
+            
+            document.getElementById('days').innerText = Math.floor(gap / day);
+            document.getElementById('hours').innerText = Math.floor((gap % day) / hour);
+            document.getElementById('mins').innerText = Math.floor((gap % hour) / minute);
+            document.getElementById('secs').innerText = Math.floor((gap % minute) / second);
+        }, 1000);
+    </script>
+</body>
+</html>

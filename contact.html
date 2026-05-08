@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smokey | Contact & Location</title>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <style>
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+        .contact-info-card {
+            background: var(--surface);
+            padding: 40px;
+            border-radius: var(--radius);
+        }
+        .contact-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .contact-item i {
+            font-size: 24px;
+            color: var(--accent);
+        }
+        .contact-item h4 {
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        .contact-item p {
+            text-align: left;
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 400px;
+            background: var(--surface);
+            border-radius: var(--radius);
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 360px) {
+            .container {
+                padding: 0 15px;
+            }
+            .contact-info-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">SMOKEY</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home2.html" class="nav-link">Home 2</a>
+                <a href="cigars.html" class="nav-link">Cigars</a>
+                <a href="accessories.html" class="nav-link">Accessories</a>
+                <a href="membership.html" class="nav-link">Membership</a>
+                <a href="events.html" class="nav-link">Events</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle"><i class="ph ph-moon"></i></button>
+                <button class="rtl-toggle"><i class="ph ph-arrows-left-right"></i></button>
+                <a href="login.html" class="btn login-btn">Login</a>
+                <button class="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Drawer -->
+    <div class="drawer-overlay"></div>
+    <div class="drawer">
+        <button class="drawer-close"><i class="ph ph-x"></i></button>
+        <div class="drawer-links">
+            <a href="index.html" class="drawer-link">Home</a>
+            <a href="home2.html" class="drawer-link">Home 2</a>
+            <a href="cigars.html" class="drawer-link">Cigars</a>
+            <a href="accessories.html" class="drawer-link">Accessories</a>
+            <a href="membership.html" class="drawer-link">Membership</a>
+            <a href="events.html" class="drawer-link">Events</a>
+            <a href="blog.html" class="drawer-link">Blog</a>
+            <a href="contact.html" class="drawer-link">Contact</a>
+            <a href="login.html" class="drawer-link">Login</a>
+        </div>
+        <div class="drawer-footer">
+            <button class="theme-toggle"><i class="ph ph-moon"></i></button>
+            <button class="rtl-toggle"><i class="ph ph-arrows-left-right"></i></button>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-header" style="background: var(--surface); padding: 120px 0 60px;">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Visit our lounge or reach out for membership inquiries and reservations.</p>
+            </div>
+        </section>
+
+        <section style="padding: 60px 0;">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <div class="contact-info-card">
+                            <div class="contact-item">
+                                <i class="ph ph-map-pin-line"></i>
+                                <div>
+                                    <h4>Lounge Location</h4>
+                                    <p>123 Cedar Street, Suite 400<br>Bourbon Heights, KY 40202</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="ph ph-phone-call"></i>
+                                <div>
+                                    <h4>Call Us</h4>
+                                    <p>(555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="ph ph-envelope-simple"></i>
+                                <div>
+                                    <h4>Email Inquiries</h4>
+                                    <p>lounge@smokey.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="ph ph-clock"></i>
+                                <div>
+                                    <h4>Hours of Operation</h4>
+                                    <p>Mon - Thu: 10:00 AM - 11:00 PM<br>Fri - Sat: 10:00 AM - 01:00 AM<br>Sun: 12:00 PM - 10:00 PM</p>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; gap: 15px; margin-top: 20px;">
+                                <a href="#" class="btn btn-outline" style="padding: 10px; min-width: auto;"><i class="ph ph-instagram-logo"></i></a>
+                                <a href="#" class="btn btn-outline" style="padding: 10px; min-width: auto;"><i class="ph ph-facebook-logo"></i></a>
+                                <a href="#" class="btn btn-outline" style="padding: 10px; min-width: auto;"><i class="ph ph-twitter-logo"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <form id="contactForm" action="https://formspree.io/f/placeholder" method="POST">
+                            <div class="form-row">
+                                <div class="form-group" style="margin-bottom: 20px;">
+                                    <label style="display: block; margin-bottom: 8px; font-weight: 600;">Full Name *</label>
+                                    <input type="text" name="name" placeholder="John Doe" required style="width: 100%; padding: 12px; border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius); color: var(--text);">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 20px;">
+                                    <label style="display: block; margin-bottom: 8px; font-weight: 600;">Email Address *</label>
+                                    <input type="email" name="email" placeholder="john@example.com" required style="width: 100%; padding: 12px; border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius); color: var(--text);">
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600;">Subject</label>
+                                <select name="subject" style="width: 100%; padding: 12px; border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius); color: var(--text);">
+                                    <option>Membership Inquiry</option>
+                                    <option>Table Reservation</option>
+                                    <option>Retail Order Support</option>
+                                    <option>Private Event Request</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 30px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600;">Message *</label>
+                                <textarea name="message" rows="5" placeholder="How can we help you?" required style="width: 100%; padding: 12px; border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius); color: var(--text); resize: none;"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="map-placeholder">
+                    <div style="text-align: center;">
+                        <i class="ph ph-map-trifold" style="font-size: 48px; color: var(--accent); margin-bottom: 10px;"></i>
+                        <h3>Interactive Map</h3>
+                        <p>Google Maps Integration Placeholder</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">SMOKEY</a>
+                    <p style="text-align: left; margin: 0; font-size: 16px; color: #CCCCCC;">A premier destination for cigar enthusiasts.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cigars.html">Cigars</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links" style="color: #CCCCCC;">
+                        <li>123 Cedar Street</li>
+                        <li>(555) 123-4567</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <form style="display: flex; gap: 10px;">
+                        <input type="email" placeholder="Email" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #FFFFFF; padding: 10px; border-radius: var(--radius); flex-grow: 1;">
+                        <button class="btn btn-primary" style="padding: 10px 15px;"><i class="ph ph-paper-plane-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="font-size: 14px; color: #888888;">&copy; 2026 Smokey Cigar Lounge.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
