@@ -10,6 +10,7 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
     
     <style>
         body {
@@ -52,10 +53,34 @@
         .form-group input {
             width: 100%;
             padding: 12px;
+            padding-right: 45px; /* Space for eye icon */
             border: 1px solid var(--border);
             border-radius: var(--radius);
             background: var(--surface);
             color: var(--text);
+        }
+        .pass-wrapper {
+            position: relative;
+        }
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #888;
+            transition: var(--transition);
+        }
+        .toggle-password:hover {
+            color: var(--accent);
+        }
+        [dir="rtl"] .form-group input {
+            padding-right: 12px;
+            padding-left: 45px;
+        }
+        [dir="rtl"] .toggle-password {
+            right: auto;
+            left: 15px;
         }
         .divider {
             margin: 30px 0;
@@ -94,13 +119,108 @@
             color: #1A1A1A;
             border-color: #DDDDDD;
         }
-        .btn-email {
+        .btn-apple {
             background: var(--text);
             color: var(--bg);
+        }
+        .form-utils {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        .forgot-pass {
+            color: var(--accent);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .forgot-pass:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: var(--accent);
+        }
+        .btn-apple:hover {
+            background: var(--accent);
+            color: var(--black);
+        }
+        .auth-toggles {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            display: flex;
+            gap: 15px;
+            z-index: 100;
+        }
+        .auth-toggles .theme-toggle, .auth-toggles .rtl-toggle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .auth-toggles button:hover {
+            transform: translateY(-2px);
+            background: var(--accent);
+            color: var(--black);
+            border-color: var(--accent);
+        }
+        [dir="rtl"] .auth-toggles {
+            right: auto;
+            left: 30px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                align-items: flex-start;
+                padding-top: 80px;
+                overflow-y: hidden;
+            }
+            .auth-card {
+                width: 92%;
+                padding: 30px 20px;
+            }
+            .auth-toggles {
+                top: 20px;
+                right: 20px;
+            }
+            [dir="rtl"] .auth-toggles {
+                left: 20px;
+            }
+            .auth-logo {
+                font-size: 26px;
+                margin-bottom: 15px;
+            }
+            .divider {
+                margin: 20px 0;
+            }
         }
     </style>
 </head>
 <body>
+
+    <div class="auth-toggles">
+        <button class="theme-toggle" aria-label="Toggle Theme"><i class="ph ph-moon"></i></button>
+        <button class="rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+    </div>
 
     <div class="auth-card">
         <a href="index.html" class="auth-logo">SMOKEY</a>
@@ -113,7 +233,16 @@
             </div>
             <div class="form-group">
                 <label>Password</label>
-                <input type="password" placeholder="••••••••" required>
+                <div class="pass-wrapper">
+                    <input type="password" placeholder="••••••••" required id="loginPass">
+                    <i class="ph ph-eye toggle-password" data-target="loginPass"></i>
+                </div>
+            </div>
+            <div class="form-utils">
+                <label class="remember-me">
+                    <input type="checkbox"> Remember Me
+                </label>
+                <a href="#" class="forgot-pass">Forgot Password?</a>
             </div>
             <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Login</button>
         </form>
@@ -125,8 +254,8 @@
         <button class="social-btn btn-google">
             <i class="ph ph-google-logo" style="color: #DB4437;"></i> Continue with Google
         </button>
-        <button class="social-btn btn-email">
-            <i class="ph ph-envelope"></i> Continue with Email
+        <button class="social-btn btn-apple">
+            <i class="ph ph-apple-logo"></i> Continue with Apple
         </button>
 
         <p style="margin-top: 30px; font-size: 15px;">
@@ -135,5 +264,17 @@
     </div>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        // Password Toggle Logic
+        document.querySelectorAll('.toggle-password').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const input = document.getElementById(btn.getAttribute('data-target'));
+                const isPass = input.type === 'password';
+                input.type = isPass ? 'text' : 'password';
+                btn.classList.toggle('ph-eye');
+                btn.classList.toggle('ph-eye-slash');
+            });
+        });
+    </script>
 </body>
 </html>

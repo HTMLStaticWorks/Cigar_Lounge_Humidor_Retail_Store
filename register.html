@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smokey | Register</title>
-    
+
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+    <link rel="stylesheet" href="assets/css/rtl.css">
+
     <style>
         body {
             height: 100vh;
@@ -18,18 +20,20 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1595113316349-9fa4ee24f884?q=80&w=2000') no-repeat center center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1595113316349-9fa4ee24f884?q=80&w=2000') no-repeat center center;
             background-size: cover;
         }
+
         .auth-card {
             background: var(--bg);
             padding: 40px;
             border-radius: var(--radius);
             width: 100%;
             max-width: 480px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             text-align: center;
         }
+
         .auth-logo {
             font-family: var(--font-heading);
             font-size: 32px;
@@ -39,24 +43,52 @@
             margin-bottom: 20px;
             display: block;
         }
+
         .form-group {
             margin-bottom: 15px;
             text-align: left;
         }
+
         .form-group label {
             display: block;
             margin-bottom: 5px;
             font-weight: 600;
             font-size: 14px;
         }
+
         .form-group input {
             width: 100%;
             padding: 10px;
+            padding-right: 40px; /* Space for eye icon */
             border: 1px solid var(--border);
             border-radius: var(--radius);
             background: var(--surface);
             color: var(--text);
         }
+        .pass-wrapper {
+            position: relative;
+        }
+        .toggle-password {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #888;
+            transition: var(--transition);
+        }
+        .toggle-password:hover {
+            color: var(--accent);
+        }
+        [dir="rtl"] .form-group input {
+            padding-right: 10px;
+            padding-left: 40px;
+        }
+        [dir="rtl"] .toggle-password {
+            right: auto;
+            left: 12px;
+        }
+
         .terms-group {
             display: flex;
             align-items: flex-start;
@@ -65,15 +97,18 @@
             margin: 20px 0;
             font-size: 14px;
         }
+
         .terms-group input {
             margin-top: 4px;
         }
+
         .divider {
             margin: 20px 0;
             position: relative;
             height: 1px;
             background: var(--border);
         }
+
         .divider span {
             position: absolute;
             top: 50%;
@@ -84,6 +119,7 @@
             font-size: 12px;
             color: #888;
         }
+
         .social-btn {
             width: 100%;
             padding: 10px;
@@ -99,23 +135,123 @@
             cursor: pointer;
             transition: var(--transition);
         }
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: var(--accent);
+        }
+        .btn-apple:hover {
+            background: var(--accent);
+            color: var(--black);
+        }
+
         .btn-google {
             background: #FFFFFF;
             color: #1A1A1A;
             border-color: #DDDDDD;
         }
-        .btn-email {
+
+        .btn-apple {
             background: var(--text);
             color: var(--bg);
         }
+
+        .auth-toggles {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            display: flex;
+            gap: 15px;
+            z-index: 100;
+        }
+
+        .auth-toggles .theme-toggle,
+        .auth-toggles .rtl-toggle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .auth-toggles button:hover {
+            transform: translateY(-2px);
+            background: var(--accent);
+            color: var(--black);
+            border-color: var(--accent);
+        }
+
+        [dir="rtl"] .auth-toggles {
+            right: auto;
+            left: 30px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                align-items: flex-start;
+                padding-top: 80px;
+                overflow-y: hidden;
+            }
+
+            .auth-card {
+                width: 92%;
+                padding: 20px;
+                max-height: calc(100vh - 100px);
+            }
+
+            .auth-toggles {
+                top: 20px;
+                right: 20px;
+            }
+
+            [dir="rtl"] .auth-toggles {
+                left: 20px;
+            }
+
+            .auth-logo {
+                font-size: 22px;
+                margin-bottom: 5px;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                margin-bottom: 10px !important;
+            }
+
+            .form-group {
+                margin-bottom: 10px;
+            }
+
+            .terms-group {
+                margin: 10px 0;
+            }
+
+            .divider {
+                margin: 15px 0;
+            }
+        }
     </style>
 </head>
+
 <body>
+
+    <div class="auth-toggles">
+        <button class="theme-toggle" aria-label="Toggle Theme"><i class="ph ph-moon"></i></button>
+        <button class="rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+    </div>
 
     <div class="auth-card">
         <a href="index.html" class="auth-logo">SMOKEY</a>
         <h2 style="margin-bottom: 20px;">Join the Club</h2>
-        
+
         <form id="registerForm">
             <div class="form-group">
                 <label>Full Name</label>
@@ -125,20 +261,27 @@
                 <label>Email Address</label>
                 <input type="email" placeholder="email@example.com" required>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" placeholder="••••••••" required minlength="8">
-                </div>
-                <div class="form-group">
-                    <label>Confirm Password</label>
-                    <input type="password" placeholder="••••••••" required minlength="8">
+
+            <div class="form-group">
+                <label>Password</label>
+                <div class="pass-wrapper">
+                    <input type="password" placeholder="••••••••" required minlength="8" id="regPass">
+                    <i class="ph ph-eye toggle-password" data-target="regPass"></i>
                 </div>
             </div>
-            
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <div class="pass-wrapper">
+                    <input type="password" placeholder="••••••••" required minlength="8" id="regConfirm">
+                    <i class="ph ph-eye toggle-password" data-target="regConfirm"></i>
+                </div>
+            </div>
+
+
             <div class="terms-group">
                 <input type="checkbox" id="terms" required>
-                <label for="terms">I accept the <a href="#" style="color: var(--accent);">Terms & Conditions</a> and Privacy Policy.</label>
+                <label for="terms">I accept the <a href="#" style="color: var(--accent);">Terms & Conditions</a> and
+                    Privacy Policy.</label>
             </div>
 
             <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
@@ -151,8 +294,8 @@
         <button class="social-btn btn-google">
             <i class="ph ph-google-logo" style="color: #DB4437;"></i> Continue with Google
         </button>
-        <button class="social-btn btn-email">
-            <i class="ph ph-envelope"></i> Continue with Email
+        <button class="social-btn btn-apple">
+            <i class="ph ph-apple-logo"></i> Continue with Apple
         </button>
 
         <p style="margin-top: 20px; font-size: 15px;">
@@ -162,9 +305,20 @@
 
     <script src="assets/js/main.js"></script>
     <script>
+        // Password Toggle Logic
+        document.querySelectorAll('.toggle-password').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const input = document.getElementById(btn.getAttribute('data-target'));
+                const isPass = input.type === 'password';
+                input.type = isPass ? 'text' : 'password';
+                btn.classList.toggle('ph-eye');
+                btn.classList.toggle('ph-eye-slash');
+            });
+        });
+
         document.getElementById('registerForm').addEventListener('submit', (e) => {
-            const pass = e.target.querySelectorAll('input[type="password"]')[0].value;
-            const confirm = e.target.querySelectorAll('input[type="password"]')[1].value;
+            const pass = document.getElementById('regPass').value;
+            const confirm = document.getElementById('regConfirm').value;
             
             if (pass !== confirm) {
                 e.preventDefault();
@@ -173,4 +327,5 @@
         });
     </script>
 </body>
+
 </html>

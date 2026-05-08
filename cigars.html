@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smokey | Cigar Collection</title>
-    
+
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
-    
+
     <style>
         .filter-bar {
             background: var(--surface);
@@ -24,11 +25,13 @@
             align-items: center;
             justify-content: center;
         }
+
         .filter-group {
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         .filter-select {
             padding: 8px 15px;
             border: 1px solid var(--border);
@@ -37,6 +40,7 @@
             border-radius: var(--radius);
             font-family: var(--font-body);
         }
+
         .pickup-cart {
             position: fixed;
             bottom: 30px;
@@ -54,6 +58,7 @@
             cursor: pointer;
             z-index: 900;
         }
+
         .cart-count {
             position: absolute;
             top: -5px;
@@ -68,16 +73,18 @@
             align-items: center;
             justify-content: center;
         }
+
         .order-modal {
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0, 0, 0, 0.8);
             display: none;
             align-items: center;
             justify-content: center;
             z-index: 2000;
             padding: 20px;
         }
+
         .modal-content {
             background: var(--bg);
             padding: 40px;
@@ -86,16 +93,20 @@
             width: 100%;
             position: relative;
         }
+
         .form-group {
             margin-bottom: 20px;
         }
+
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-family: var(--font-heading);
             font-weight: 600;
         }
-        .form-group input, .form-group select {
+
+        .form-group input,
+        .form-group select {
             width: 100%;
             padding: 12px;
             border: 1px solid var(--border);
@@ -105,6 +116,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -168,7 +180,7 @@
                         <select class="filter-select">
                             <option>All Origins</option>
                             <option>Nicaragua</option>
-                            <option>Dominican Republic</option>
+                            <option>Dominican</option>
                             <option>Honduras</option>
                         </select>
                     </div>
@@ -204,40 +216,64 @@
                 <!-- Product Grid -->
                 <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                     <!-- Card 1 -->
-                    <div class="card product-card">
-                        <img src="https://images.unsplash.com/photo-1621644782052-19e34e5a9757?q=80&w=600" alt="Cigar" style="height: 250px; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
-                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Nicaragua | Medium-Full</span>
-                        <h3>Padrón Family Reserve</h3>
-                        <p style="font-size: 15px;">A rich, complex profile with notes of cocoa and espresso.</p>
-                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$32.00</div>
-                        <button class="btn btn-primary add-to-pickup" style="width: 100%;">Order for Pickup</button>
+                    <div class="card product-card" style="padding: 0; overflow: hidden;">
+                        <img src="assets/images/padron-family-reserve.jpg" alt="Padrón Family Reserve"
+                            style="width: 100%; height: 250px; object-fit: cover; object-position: center; display: block;">
+                        <div style="padding: 25px;">
+                            <span
+                                style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Nicaragua
+                                | Medium-Full</span>
+                            <h3>Padrón Family Reserve</h3>
+                            <p style="font-size: 15px;">A rich, complex profile with notes of cocoa and espresso.</p>
+                            <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">
+                                $32.00</div>
+                            <button class="btn btn-primary add-to-pickup" style="width: 100%;">Order for Pickup</button>
+                        </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="card product-card">
-                        <img src="https://images.unsplash.com/photo-1598006520336-39f5c490892f?q=80&w=600" alt="Cigar" style="height: 250px; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
-                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Dominican | Mild</span>
-                        <h3>Davidoff Grand Cru</h3>
-                        <p style="font-size: 15px;">Elegant and refined with a smooth, woody finish.</p>
-                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$24.50</div>
-                        <button class="btn btn-primary add-to-pickup" style="width: 100%;">Order for Pickup</button>
+                    <div class="card product-card" style="padding: 0; overflow: hidden;">
+                        <img src="assets/images/davidoff-grand-cru.jpg" alt="Davidoff Grand Cru"
+                            style="width: 100%; height: 250px; object-fit: cover; object-position: center; display: block;">
+                        <div style="padding: 25px;">
+                            <span
+                                style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Dominican
+                                | Mild</span>
+                            <h3>Davidoff Grand Cru</h3>
+                            <p style="font-size: 15px;">Elegant and refined with a smooth, woody finish.</p>
+                            <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">
+                                $24.50</div>
+                            <button class="btn btn-primary add-to-pickup" style="width: 100%;">Order for Pickup</button>
+                        </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="card product-card">
-                        <img src="https://images.unsplash.com/photo-1621644783321-4ba29c016e7f?q=80&w=600" alt="Cigar" style="height: 250px; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
-                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Honduras | Full</span>
-                        <h3>Rocky Patel Decade</h3>
-                        <p style="font-size: 15px;">Robust and earthy with a perfect draw every time.</p>
-                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$18.00</div>
-                        <button class="btn btn-primary add-to-pickup" style="width: 100%;">Order for Pickup</button>
+                    <div class="card product-card" style="padding: 0; overflow: hidden;">
+                        <img src="assets/images/rocky-patel-decade.jpg" alt="Rocky Patel Decade"
+                            style="width: 100%; height: 250px; object-fit: cover; object-position: center; display: block;">
+                        <div style="padding: 25px;">
+                            <span
+                                style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Honduras
+                                | Full</span>
+                            <h3>Rocky Patel Decade</h3>
+                            <p style="font-size: 15px;">Robust and earthy with a perfect draw every time.</p>
+                            <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">
+                                $18.00</div>
+                            <button class="btn btn-primary add-to-pickup" style="width: 100%;">Order for Pickup</button>
+                        </div>
                     </div>
                     <!-- Card 4 -->
-                    <div class="card product-card">
-                        <img src="https://images.unsplash.com/photo-1595113316349-9fa4ee24f884?q=80&w=600" alt="Cigar" style="height: 250px; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
-                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Nicaragua | Full</span>
-                        <h3>Oliva Serie V Melanio</h3>
-                        <p style="font-size: 15px;">Award-winning blend with deep, spicy undertones.</p>
-                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$15.50</div>
-                        <button class="btn btn-primary add-to-pickup" style="width: 100%;">Order for Pickup</button>
+                    <div class="card product-card" style="padding: 0; overflow: hidden;">
+                        <img src="assets/images/oliva-serie-v-melanio.jpg" alt="Oliva Serie V Melanio"
+                            style="width: 100%; height: 250px; object-fit: cover; object-position: center; display: block;">
+                        <div style="padding: 25px;">
+                            <span
+                                style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Nicaragua
+                                | Full</span>
+                            <h3>Oliva Serie V Melanio</h3>
+                            <p style="font-size: 15px;">Award-winning blend with deep, spicy undertones.</p>
+                            <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">
+                                $15.50</div>
+                            <button class="btn btn-primary add-to-pickup" style="width: 100%;">Order for Pickup</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -253,11 +289,15 @@
     <!-- Order Modal -->
     <div class="order-modal" id="orderModal">
         <div class="modal-content">
-            <button id="closeModal" style="position: absolute; top: 15px; right: 15px; background: none; font-size: 20px; color: var(--text);"><i class="ph ph-x"></i></button>
+            <button id="closeModal"
+                style="position: absolute; top: 15px; right: 15px; background: none; font-size: 20px; color: var(--text);"><i
+                    class="ph ph-x"></i></button>
             <h2 style="text-align: left; margin-bottom: 10px;">Local Pickup Order</h2>
-            <p style="text-align: left; font-size: 15px; margin-bottom: 30px;">Complete your reservation. We'll have your selection ready at the lounge.</p>
-            
-            <div id="cartItems" style="margin-bottom: 25px; max-height: 150px; overflow-y: auto; border-bottom: 1px solid var(--border); padding-bottom: 15px;">
+            <p style="text-align: left; font-size: 15px; margin-bottom: 30px;">Complete your reservation. We'll have
+                your selection ready at the lounge.</p>
+
+            <div id="cartItems"
+                style="margin-bottom: 25px; max-height: 150px; overflow-y: auto; border-bottom: 1px solid var(--border); padding-bottom: 15px;">
                 <!-- Cart items will appear here -->
             </div>
 
@@ -292,7 +332,9 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">SMOKEY</a>
-                    <p style="text-align: left; margin: 0; font-size: 16px; color: #CCCCCC;">A premier destination for cigar enthusiasts, offering a curated selection of premium tobacco and a luxury lounge experience.</p>
+                    <p style="text-align: left; margin: 0; font-size: 16px; color: #CCCCCC;">A premier destination for
+                        cigar enthusiasts, offering a curated selection of premium tobacco and a luxury lounge
+                        experience.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -313,10 +355,13 @@
                 </div>
                 <div class="footer-col">
                     <h4>Newsletter</h4>
-                    <p style="text-align: left; margin: 0; font-size: 14px; color: #CCCCCC; margin-bottom: 15px;">Subscribe for exclusive event invites and new arrivals.</p>
+                    <p style="text-align: left; margin: 0; font-size: 14px; color: #CCCCCC; margin-bottom: 15px;">
+                        Subscribe for exclusive event invites and new arrivals.</p>
                     <form style="display: flex; gap: 10px;">
-                        <input type="email" placeholder="Your Email" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #FFFFFF; padding: 10px; border-radius: var(--radius); flex-grow: 1;">
-                        <button class="btn btn-primary" style="padding: 10px 15px;"><i class="ph ph-paper-plane-right"></i></button>
+                        <input type="email" placeholder="Your Email" required
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #FFFFFF; padding: 10px; border-radius: var(--radius); flex-grow: 1;">
+                        <button class="btn btn-primary" style="padding: 10px 15px;"><i
+                                class="ph ph-paper-plane-right"></i></button>
                     </form>
                 </div>
             </div>
@@ -341,10 +386,10 @@
                 const card = e.target.closest('.card');
                 const name = card.querySelector('h3').innerText;
                 const price = card.querySelector('div').innerText;
-                
+
                 cart.push({ name, price });
                 updateCart();
-                
+
                 // Visual feedback
                 const originalText = btn.innerText;
                 btn.innerText = 'Added!';
@@ -395,7 +440,7 @@
             `;
             document.querySelector('.modal-content').innerHTML = '';
             document.querySelector('.modal-content').appendChild(successMsg);
-            
+
             cart = [];
             updateCart();
             setTimeout(() => {
@@ -405,4 +450,5 @@
         });
     </script>
 </body>
+
 </html>
