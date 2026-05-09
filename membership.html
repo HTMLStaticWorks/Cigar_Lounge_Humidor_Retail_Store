@@ -66,46 +66,7 @@
         }
 
         .faq-section {
-            max-width: 800px;
-            margin: 80px auto;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid var(--border);
-            padding: 20px 0;
-        }
-
-        .faq-question {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: none;
-            border: none;
-            font-family: var(--font-heading);
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--text);
-            cursor: pointer;
-            text-align: left;
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            color: var(--text);
-            opacity: 0.8;
-            margin-top: 0;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 200px;
-            margin-top: 15px;
-        }
-
-        .faq-item.active i {
-            transform: rotate(180deg);
+            padding: 80px 0;
         }
 
         @media (max-width: 768px) {
@@ -191,6 +152,42 @@
             </div>
         </section>
 
+        <!-- Membership Experience Section -->
+        <section style="padding: 100px 0; background: var(--surface);">
+            <div class="container">
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 80px; align-items: center;">
+                    <div class="animate-on-scroll">
+                        <img src="assets/images/membership-experience.png" alt="Membership Experience"
+                            style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
+                    </div>
+                    <div class="animate-on-scroll"
+                        style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <span
+                            style="color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">The
+                            Lifestyle</span>
+                        <h2 style="font-size: 42px; margin: 15px 0 25px;">A Community of <br>Shared Passions</h2>
+                        <p style="font-size: 18px; line-height: 1.8; margin-bottom: 30px;">Being a member of Smokey is
+                            more than just access to a lounge; it's an invitation to a refined way of life. Our members
+                            enjoy an environment where the fireplace is always warm, the conversation is always
+                            stimulating, and the cigars are always at their peak.</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%;">
+                            <div>
+                                <h4 style="color: var(--accent); margin-bottom: 10px;">Exclusive Events</h4>
+                                <p style="font-size: 14px;">Monthly tastings and masterclasses with industry legends.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--accent); margin-bottom: 10px;">Private Lockers</h4>
+                                <p style="font-size: 14px;">24/7 climate-monitored storage for your prized collection.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section style="padding: 60px 0;">
             <div class="container">
                 <!-- Tier 1 -->
@@ -255,6 +252,8 @@
             </div>
         </section>
 
+
+
         <!-- FAQ Section -->
         <section class="faq-section">
             <div class="container">
@@ -279,24 +278,7 @@
                                 cutting fee of $15 per person. This fee is waived for Private Reserve members.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">How does the humidor rental work? <i
-                                class="ph ph-caret-down"></i></button>
-                        <div class="faq-answer">
-                            <p style="text-align: left; margin: 0;">Connoisseur and Private Reserve members receive a
-                                dedicated, climate-controlled cedar locker. We monitor the humidity levels 24/7 to
-                                ensure your collection remains in peak condition.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">Are memberships month-to-month? <i
-                                class="ph ph-caret-down"></i></button>
-                        <div class="faq-answer">
-                            <p style="text-align: left; margin: 0;">Yes, our memberships are billed monthly with no
-                                long-term contracts. However, we offer a 15% discount for annual commitments paid
-                                upfront.</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -350,22 +332,7 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
-    <script>
-        // FAQ Accordion logic
-        document.querySelectorAll('.faq-question').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const item = btn.parentElement;
-                const isActive = item.classList.contains('active');
 
-                // Close all other items
-                document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

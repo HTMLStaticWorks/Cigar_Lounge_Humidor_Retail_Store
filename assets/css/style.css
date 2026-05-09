@@ -137,6 +137,74 @@ button, .btn {
     color: var(--bg);
 }
 
+/* FAQ Accordion */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--surface);
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    text-align: left;
+}
+
+.faq-question i {
+    transition: var(--transition);
+    color: var(--accent);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0 30px;
+    opacity: 0;
+}
+
+.faq-answer p {
+    padding-bottom: 25px;
+    color: #888;
+    line-height: 1.6;
+}
+
+.faq-item.active {
+    border-color: var(--accent);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.btn-secondary {
+    background-color: var(--accent);
+    color: var(--black);
+}
+
 .btn-primary {
     background-color: var(--accent);
     color: var(--black);
