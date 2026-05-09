@@ -260,11 +260,13 @@ button, .btn {
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: 2px;
     color: var(--accent);
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
 }
 
 .nav-links {
