@@ -315,6 +315,12 @@ button, .btn {
     color: var(--bg);
 }
 
+.login-btn:hover {
+    background-color: var(--accent);
+    color: var(--black);
+    transform: translateY(-2px);
+}
+
 /* Hamburger & Drawer */
 .hamburger {
     display: none;
@@ -778,6 +784,20 @@ footer {
     .event-card h3, 
     .event-card p {
         text-align: center !important;
+    }
+
+    .footer-col:nth-child(3) .footer-links {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-col:nth-child(3) .footer-links li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-align: left;
+        margin-bottom: 12px;
     }
 }
 
