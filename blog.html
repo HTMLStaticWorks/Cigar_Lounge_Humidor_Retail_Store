@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smokey | The Smoking Room Blog</title>
-    
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -23,9 +28,9 @@
                 <a href="home2.html" class="nav-link">Home 2</a>
                 <a href="cigars.html" class="nav-link">Cigars</a>
                 <a href="accessories.html" class="nav-link">Accessories</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
                 <a href="membership.html" class="nav-link">Membership</a>
                 <a href="events.html" class="nav-link">Events</a>
-                <a href="blog.html" class="nav-link active">Blog</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
             <div class="nav-actions">
@@ -46,11 +51,11 @@
             <a href="home2.html" class="drawer-link">Home 2</a>
             <a href="cigars.html" class="drawer-link">Cigars</a>
             <a href="accessories.html" class="drawer-link">Accessories</a>
+            <a href="blog.html" class="drawer-link active">Blog</a>
             <a href="membership.html" class="drawer-link">Membership</a>
             <a href="events.html" class="drawer-link">Events</a>
-            <a href="blog.html" class="drawer-link">Blog</a>
             <a href="contact.html" class="drawer-link">Contact</a>
-            <a href="login.html" class="drawer-link">Login</a>
+            <a href="login.html" class="btn login-btn" style="margin-top: 10px;">Login</a>
         </div>
         <div class="drawer-footer">
             <button class="theme-toggle"><i class="ph ph-moon"></i></button>
@@ -68,37 +73,113 @@
 
         <section style="padding: 60px 0;">
             <div class="container">
-                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                <div class="card-grid tri-grid">
                     <!-- Blog 1 -->
                     <article class="card" style="padding: 0; overflow: hidden; align-items: stretch; text-align: left;">
-                        <img src="https://images.unsplash.com/photo-1542451313-0752ee2fe83d?q=80&w=800" style="height: 250px; object-fit: cover;">
+                        <img src="assets/images/blog-cognac-maduro.jpg" alt="Cognac and Maduro"
+                            style="height: 250px; width: 100%; object-fit: cover; object-position: center; display: block;">
                         <div style="padding: 30px;">
-                            <span style="color: var(--accent); font-weight: 700; font-size: 12px; text-transform: uppercase;">Pairing Guide | May 05, 2026</span>
+                            <span
+                                style="color: var(--accent); font-weight: 700; font-size: 12px; text-transform: uppercase;">Pairing
+                                Guide | May 05, 2026</span>
                             <h3 style="text-align: left; margin: 10px 0;">The Art of the Evening: Cognac and Maduro</h3>
-                            <p style="text-align: left; margin: 0; font-size: 16px;">Exploring the symbiotic relationship between full-bodied wrappers and aged spirits...</p>
-                            <a href="blog-single.html" style="color: var(--accent); font-weight: 700; margin-top: 20px; display: inline-block;">Read More <i class="ph ph-arrow-right"></i></a>
+                            <p style="text-align: left; margin: 0; font-size: 16px;">Exploring the symbiotic
+                                relationship between full-bodied wrappers and aged spirits...</p>
+                            <a href="blog-single.html"
+                                style="color: var(--accent); font-weight: 700; margin-top: 20px; display: inline-block;">Read
+                                More <i class="ph ph-arrow-right"></i></a>
                         </div>
                     </article>
                     <!-- Blog 2 -->
                     <article class="card" style="padding: 0; overflow: hidden; align-items: stretch; text-align: left;">
-                        <img src="https://images.unsplash.com/photo-1595113316349-9fa4ee24f884?q=80&w=800" style="height: 250px; object-fit: cover;">
+                        <img src="assets/images/blog-oliva-serie-v.jpg" alt="Oliva Serie V Melanio"
+                            style="height: 250px; width: 100%; object-fit: cover; object-position: center; display: block;">
                         <div style="padding: 30px;">
-                            <span style="color: var(--accent); font-weight: 700; font-size: 12px; text-transform: uppercase;">Review | April 28, 2026</span>
-                            <h3 style="text-align: left; margin: 10px 0;">Oliva Serie V Melanio: Still the Gold Standard?</h3>
-                            <p style="text-align: left; margin: 0; font-size: 16px;">A deep dive into why this Nicaraguan blend continues to dominate the charts...</p>
-                            <a href="blog-single.html" style="color: var(--accent); font-weight: 700; margin-top: 20px; display: inline-block;">Read More <i class="ph ph-arrow-right"></i></a>
+                            <span
+                                style="color: var(--accent); font-weight: 700; font-size: 12px; text-transform: uppercase;">Review
+                                | April 28, 2026</span>
+                            <h3 style="text-align: left; margin: 10px 0;">Oliva Serie V Melanio: Still the Gold
+                                Standard?</h3>
+                            <p style="text-align: left; margin: 0; font-size: 16px;">A deep dive into why this
+                                Nicaraguan blend continues to dominate the charts...</p>
+                            <a href="blog-single.html"
+                                style="color: var(--accent); font-weight: 700; margin-top: 20px; display: inline-block;">Read
+                                More <i class="ph ph-arrow-right"></i></a>
                         </div>
                     </article>
                     <!-- Blog 3 -->
                     <article class="card" style="padding: 0; overflow: hidden; align-items: stretch; text-align: left;">
-                        <img src="https://images.unsplash.com/photo-1598006520336-39f5c490892f?q=80&w=800" style="height: 250px; object-fit: cover;">
+                        <img src="assets/images/blog-humidor-maintenance.jpg" alt="Humidor Maintenance"
+                            style="height: 250px; width: 100%; object-fit: cover; object-position: center; display: block;">
                         <div style="padding: 30px;">
-                            <span style="color: var(--accent); font-weight: 700; font-size: 12px; text-transform: uppercase;">Culture | April 20, 2026</span>
-                            <h3 style="text-align: left; margin: 10px 0;">Maintaining Your Humidor: A Seasoned Approach</h3>
-                            <p style="text-align: left; margin: 0; font-size: 16px;">Essential tips for keeping your collection in perfect condition during seasonal shifts...</p>
-                            <a href="blog-single.html" style="color: var(--accent); font-weight: 700; margin-top: 20px; display: inline-block;">Read More <i class="ph ph-arrow-right"></i></a>
+                            <span
+                                style="color: var(--accent); font-weight: 700; font-size: 12px; text-transform: uppercase;">Culture
+                                | April 20, 2026</span>
+                            <h3 style="text-align: left; margin: 10px 0;">Maintaining Your Humidor: A Seasoned Approach
+                            </h3>
+                            <p style="text-align: left; margin: 0; font-size: 16px;">Essential tips for keeping your
+                                collection in perfect condition during seasonal shifts...</p>
+                            <a href="blog-single.html"
+                                style="color: var(--accent); font-weight: 700; margin-top: 20px; display: inline-block;">Read
+                                More <i class="ph ph-arrow-right"></i></a>
                         </div>
                     </article>
+                </div>
+                <div class="pagination">
+                    <a href="#" class="page-btn"><i class="ph ph-caret-left"></i></a>
+                    <a href="#" class="page-btn active">1</a>
+                    <a href="#" class="page-btn">2</a>
+                    <a href="#" class="page-btn">3</a>
+                    <a href="#" class="page-btn"><i class="ph ph-caret-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog FAQ Section -->
+        <section style="padding: 100px 0; background: var(--surface);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Knowledge Base</h2>
+                    <p>Common questions about our curated tobacco collection and lounge etiquette.</p>
+                </div>
+
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How should I store my cigars if I don't have a humidor?</span>
+                            <i class="ph ph-caret-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>For short-term storage, a Ziploc bag with a damp paper towel (not touching the cigars) or
+                                a Boveda pack can work. However, for any collection intended to last more than a week,
+                                we strongly recommend a cedar-lined, climate-controlled humidor to maintain flavor and
+                                prevent drying.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is the best way to cut a cigar?</span>
+                            <i class="ph ph-caret-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>A clean, quick cut is essential. Whether using a straight guillotine, a V-cutter, or a
+                                punch, ensure you only remove the very top of the cap. Cutting too deep can cause the
+                                wrapper to unravel. Our staff is always available to demonstrate proper technique.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you offer locker rentals for members?</span>
+                            <i class="ph ph-caret-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, our Connoisseur and Private Reserve membership tiers include access to personal,
+                                humidified locker slots. These lockers are monitored for temperature and humidity 24/7
+                                to ensure your private collection stays in peak condition.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -110,34 +191,48 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">SMOKEY</a>
+                    <p style="text-align: left; margin: 0; font-size: 16px; color: #CCCCCC;">A premier destination for
+                        cigar enthusiasts, offering a curated selection of premium tobacco and a luxury lounge
+                        experience.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="cigars.html">Cigars</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
-                    <ul class="footer-links" style="color: #CCCCCC;">
-                        <li>123 Cedar Street</li>
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links" style="color: #CCCCCC; font-size: 16px;">
+                        <li><i class="ph ph-map-pin"></i> 123 Cedar Street, Bourbon Heights</li>
+                        <li><i class="ph ph-phone"></i> (555) 123-4567</li>
+                        <li><i class="ph ph-envelope"></i> lounge@smokey.com</li>
+                        <li><i class="ph ph-clock"></i> Mon-Sun: 10AM - 12AM</li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Newsletter</h4>
+                    <p style="text-align: left; margin: 0; font-size: 14px; color: #CCCCCC; margin-bottom: 15px;">
+                        Subscribe for exclusive event invites and new arrivals.</p>
                     <form style="display: flex; gap: 10px;">
-                        <input type="email" placeholder="Email" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #FFFFFF; padding: 10px; border-radius: var(--radius); flex-grow: 1;">
-                        <button class="btn btn-primary" style="padding: 10px 15px;"><i class="ph ph-paper-plane-right"></i></button>
+                        <input type="email" placeholder="Your Email" required
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #FFFFFF; padding: 10px; border-radius: var(--radius); flex-grow: 1;">
+                        <button class="btn btn-primary" style="padding: 10px 15px;"><i
+                                class="ph ph-paper-plane-right"></i></button>
                     </form>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p style="font-size: 14px; color: #888888;">&copy; 2026 Smokey Cigar Lounge.</p>
+                <p style="font-size: 14px; color: #888888;">&copy; 2026 Smokey Cigar Lounge. All rights reserved. | <a
+                        href="#">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

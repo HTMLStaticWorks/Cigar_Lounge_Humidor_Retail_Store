@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background rounded square - dark maroon -->
+  <rect width="64" height="64" rx="12" fill="#3D1A1A"/>
+  
+  <!-- Smoke wisps above the S -->
+  <path d="M32 10 C34 5, 30 2, 32 -2" stroke="#B8973A" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M38 11 C41 5, 37 2, 39 -2" stroke="#B8973A" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.55"/>
+  <path d="M26 11 C23 6, 27 3, 24 -1" stroke="#B8973A" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.45"/>
+  
+  <!-- Letter S -->
+  <text
+    x="32"
+    y="50"
+    font-family="'Playfair Display', Georgia, 'Times New Roman', serif"
+    font-size="44"
+    font-weight="900"
+    text-anchor="middle"
+    fill="#B8973A"
+    letter-spacing="-1">S</text>
+</svg>

@@ -7,12 +7,40 @@
     <title>Smokey | The Executive Lounge (Home 2)</title>
     <meta name="description" content="Discover the Smokey difference. A luxury retreat for the modern connoisseur.">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        @media (max-width: 600px) {
+            .newsletter-form {
+                flex-direction: column;
+            }
+            .newsletter-form button {
+                width: 100%;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 30px !important;
+            }
+            .split-hero h1 {
+                font-size: 36px !important;
+            }
+            .community-title {
+                font-size: 32px !important;
+            }
+        }
+        @media (max-width: 360px) {
+            .stats-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -27,9 +55,9 @@
                 <a href="home2.html" class="nav-link active">Home 2</a>
                 <a href="cigars.html" class="nav-link">Cigars</a>
                 <a href="accessories.html" class="nav-link">Accessories</a>
+                <a href="blog.html" class="nav-link">Blog</a>
                 <a href="membership.html" class="nav-link">Membership</a>
                 <a href="events.html" class="nav-link">Events</a>
-                <a href="blog.html" class="nav-link">Blog</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
 
@@ -52,14 +80,14 @@
         <button class="drawer-close"><i class="ph ph-x"></i></button>
         <div class="drawer-links">
             <a href="index.html" class="drawer-link">Home</a>
-            <a href="home2.html" class="drawer-link">Home 2</a>
+            <a href="home2.html" class="drawer-link active">Home 2</a>
             <a href="cigars.html" class="drawer-link">Cigars</a>
             <a href="accessories.html" class="drawer-link">Accessories</a>
+            <a href="blog.html" class="drawer-link">Blog</a>
             <a href="membership.html" class="drawer-link">Membership</a>
             <a href="events.html" class="drawer-link">Events</a>
-            <a href="blog.html" class="drawer-link">Blog</a>
             <a href="contact.html" class="drawer-link">Contact</a>
-            <a href="login.html" class="drawer-link">Login</a>
+            <a href="login.html" class="btn login-btn" style="margin-top: 10px;">Login</a>
         </div>
         <div class="drawer-footer">
             <button class="theme-toggle"><i class="ph ph-moon"></i></button>
@@ -154,14 +182,59 @@
             </div>
         </section>
 
+        <!-- Lounge Atmosphere Section -->
+        <section style="padding: 100px 0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 80px; align-items: center;">
+                    <div class="animate-on-scroll">
+                        <img src="assets/images/luxury-lounge-ambiance.png" alt="Luxury Lounge Atmosphere" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
+                    </div>
+                    <div class="animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <span style="color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">The Ambiance</span>
+                        <h2 style="font-size: 42px; margin: 15px 0 25px;">A Sanctuary for the <br>Modern Connoisseur</h2>
+                        <p style="font-size: 18px; line-height: 1.8; margin-bottom: 30px;">Step away from the noise and into a space designed for contemplation and conversation. Our lounge features hand-stitched leather seating, climate-controlled environments, and a silence that speaks volumes.</p>
+                        <a href="contact.html" class="btn btn-outline">Visit the Lounge</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Philosophy Section -->
+        <section style="background: var(--text); color: var(--bg); padding: 80px 0;">
+            <div class="container animate-on-scroll">
+                <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                    <h2 style="color: var(--accent); font-family: var(--font-heading); font-size: clamp(24px, 4vw, 36px); font-style: italic; line-height: 1.5; margin: 0;">
+                        "The cigar is the perfect companion to a elegant lifestyle. It demands your attention, rewards your patience, and offers a quiet reflection in a loud world."
+                    </h2>
+                    <p style="color: var(--surface); margin-top: 20px; text-transform: uppercase; letter-spacing: 3px; font-size: 14px; font-weight: 700;">— The Smokey Philosophy —</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Private Reserve Section -->
+        <section style="background: var(--surface); padding: 100px 0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 80px; align-items: center;">
+                    <div class="animate-on-scroll" style="order: 2;">
+                        <img src="assets/images/membership-lifestyle.png" alt="Private Reserve Lifestyle" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
+                    </div>
+                    <div class="animate-on-scroll" style="order: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <span style="color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">The Lifestyle</span>
+                        <h2 style="font-size: 42px; margin: 15px 0 25px;">Beyond the <br>Standard Experience</h2>
+                        <p style="font-size: 18px; line-height: 1.8; margin-bottom: 30px;">Membership at Smokey isn't just about a locker; it's about joining a community. Enjoy priority access to rare releases, personalized pairing consultations, and invitation-only tasting events held monthly.</p>
+                        <a href="membership.html" class="btn btn-primary">Membership Tiers</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Newsletter / Community Section -->
         <section style="background: var(--text); color: var(--bg); padding: 100px 0;">
             <div class="container animate-on-scroll">
                 <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                    <h2 style="color: var(--bg); font-size: 48px;">Stay in the Smoke</h2>
+                    <h2 class="community-title" style="color: var(--bg); font-size: 48px;">Stay in the Smoke</h2>
                     <p style="color: var(--surface); margin-bottom: 40px;">Join our inner circle for early access to
                         limited edition releases and private member events.</p>
-                    <form style="display: flex; gap: 15px; max-width: 600px; margin: 0 auto;">
+                    <form class="newsletter-form" style="display: flex; gap: 15px; max-width: 600px; margin: 0 auto;">
                         <input type="email" placeholder="Email Address" required
                             style="flex-grow: 1; padding: 15px 25px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #FFFFFF;">
                         <button class="btn btn-primary">Subscribe</button>

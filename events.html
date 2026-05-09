@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smokey | Events Calendar</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
@@ -166,11 +169,21 @@
 
             .event-card-horizontal {
                 flex-direction: column;
+                text-align: center;
+            }
+
+            .event-content h3 {
+                text-align: center !important;
+            }
+
+            .event-content p {
+                text-align: center !important;
             }
 
             .event-footer {
                 border-left: none;
                 border-top: 1px solid var(--border);
+                justify-content: center;
             }
         }
 
@@ -211,9 +224,9 @@
                 <a href="home2.html" class="nav-link">Home 2</a>
                 <a href="cigars.html" class="nav-link">Cigars</a>
                 <a href="accessories.html" class="nav-link">Accessories</a>
+                <a href="blog.html" class="nav-link">Blog</a>
                 <a href="membership.html" class="nav-link">Membership</a>
                 <a href="events.html" class="nav-link active">Events</a>
-                <a href="blog.html" class="nav-link">Blog</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
             <div class="nav-actions">
@@ -234,11 +247,11 @@
             <a href="home2.html" class="drawer-link">Home 2</a>
             <a href="cigars.html" class="drawer-link">Cigars</a>
             <a href="accessories.html" class="drawer-link">Accessories</a>
-            <a href="membership.html" class="drawer-link">Membership</a>
-            <a href="events.html" class="drawer-link">Events</a>
             <a href="blog.html" class="drawer-link">Blog</a>
+            <a href="membership.html" class="drawer-link">Membership</a>
+            <a href="events.html" class="drawer-link active">Events</a>
             <a href="contact.html" class="drawer-link">Contact</a>
-            <a href="login.html" class="drawer-link">Login</a>
+            <a href="login.html" class="btn login-btn" style="margin-top: 10px;">Login</a>
         </div>
         <div class="drawer-footer">
             <button class="theme-toggle"><i class="ph ph-moon"></i></button>
@@ -258,7 +271,8 @@
             <div class="container">
                 <!-- View Toggles -->
                 <div class="view-toggles">
-                    <button class="view-btn active" id="listToggle"><i class="ph ph-list-bullets"></i> List View</button>
+                    <button class="view-btn active" id="listToggle"><i class="ph ph-list-bullets"></i> List
+                        View</button>
                     <button class="view-btn" id="calendarToggle"><i class="ph ph-calendar"></i> Calendar
                         View</button>
                 </div>
@@ -423,14 +437,14 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">SMOKEY</a>
                     <p style="text-align: left; margin: 0; font-size: 16px; color: #CCCCCC;">A premier destination for
-                        cigar enthusiasts.</p>
+                        cigar enthusiasts, offering a curated selection of premium tobacco and a luxury lounge
+                        experience.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -438,19 +452,24 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="cigars.html">Cigars</a></li>
                         <li><a href="membership.html">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
-                    <ul class="footer-links" style="color: #CCCCCC;">
-                        <li>123 Cedar Street</li>
-                        <li>lounge@smokey.com</li>
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links" style="color: #CCCCCC; font-size: 16px;">
+                        <li><i class="ph ph-map-pin"></i> 123 Cedar Street, Bourbon Heights</li>
+                        <li><i class="ph ph-phone"></i> (555) 123-4567</li>
+                        <li><i class="ph ph-envelope"></i> lounge@smokey.com</li>
+                        <li><i class="ph ph-clock"></i> Mon-Sun: 10AM - 12AM</li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Newsletter</h4>
+                    <p style="text-align: left; margin: 0; font-size: 14px; color: #CCCCCC; margin-bottom: 15px;">
+                        Subscribe for exclusive event invites and new arrivals.</p>
                     <form style="display: flex; gap: 10px;">
-                        <input type="email" placeholder="Email" required
+                        <input type="email" placeholder="Your Email" required
                             style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #FFFFFF; padding: 10px; border-radius: var(--radius); flex-grow: 1;">
                         <button class="btn btn-primary" style="padding: 10px 15px;"><i
                                 class="ph ph-paper-plane-right"></i></button>
@@ -458,7 +477,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p style="font-size: 14px; color: #888888;">&copy; 2026 Smokey Cigar Lounge.</p>
+                <p style="font-size: 14px; color: #888888;">&copy; 2026 Smokey Cigar Lounge. All rights reserved. | <a
+                        href="#">Privacy Policy</a></p>
             </div>
         </div>
     </footer>

@@ -104,6 +104,39 @@ button, .btn {
     font-size: 14px;
 }
 
+/* Back to Top */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent);
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    background: var(--text);
+    color: var(--bg);
+}
+
 .btn-primary {
     background-color: var(--accent);
     color: var(--black);
@@ -140,20 +173,17 @@ button, .btn {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 20px 0;
+    padding: 15px 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
     transition: var(--transition);
 }
 
 .navbar.scrolled {
-    padding: 12px 0;
-    background: rgba(var(--bg-rgb), 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+    box-shadow: var(--shadow);
 }
 
-[data-theme="dark"] .navbar.scrolled {
-    background: rgba(0, 0, 0, 0.8);
-}
 
 .nav-content {
     display: flex;
@@ -282,6 +312,9 @@ button, .btn {
     align-self: flex-end;
     font-size: 24px;
     color: var(--text);
+    background: transparent;
+    padding: 0;
+    line-height: 1;
 }
 
 .drawer-links {
@@ -294,6 +327,12 @@ button, .btn {
     font-size: 18px;
     text-transform: uppercase;
     font-family: var(--font-heading);
+    transition: var(--transition);
+}
+
+.drawer-link:hover, .drawer-link.active {
+    color: var(--accent);
+    padding-left: 10px;
 }
 
 /* Cards */
@@ -508,6 +547,17 @@ footer {
     margin-bottom: 12px;
 }
 
+.footer-links a {
+    color: #CCCCCC;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+    transform: translateX(5px);
+}
+
 .footer-bottom {
     margin-top: 60px;
     padding-top: 30px;
@@ -517,7 +567,7 @@ footer {
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .nav-links, .nav-actions .theme-toggle, .nav-actions .rtl-toggle {
+    .nav-links, .nav-actions .theme-toggle, .nav-actions .rtl-toggle, .nav-actions .login-btn {
         display: none;
     }
     
@@ -661,4 +711,95 @@ footer {
     .event-card p {
         text-align: center !important;
     }
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 60px;
+}
+
+.page-btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg);
+    color: var(--text);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    transition: var(--transition);
+}
+
+.page-btn:hover, .page-btn.active {
+    background: var(--accent);
+    color: var(--black);
+    border-color: var(--accent);
+}
+
+/* FAQ */
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 20px;
+    transition: var(--transition);
+}
+
+.faq-question i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question {
+    color: var(--accent);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 30px 30px;
+    max-height: 500px;
+    opacity: 1;
+}
+
+.faq-answer p {
+    text-align: left;
+    margin: 0;
+    font-size: 16px;
+    max-width: 100%;
 }

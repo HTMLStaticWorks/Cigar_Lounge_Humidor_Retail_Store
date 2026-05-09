@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smokey | Cigar Collection</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
@@ -128,9 +131,9 @@
                 <a href="home2.html" class="nav-link">Home 2</a>
                 <a href="cigars.html" class="nav-link active">Cigars</a>
                 <a href="accessories.html" class="nav-link">Accessories</a>
+                <a href="blog.html" class="nav-link">Blog</a>
                 <a href="membership.html" class="nav-link">Membership</a>
                 <a href="events.html" class="nav-link">Events</a>
-                <a href="blog.html" class="nav-link">Blog</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
             <div class="nav-actions">
@@ -149,13 +152,13 @@
         <div class="drawer-links">
             <a href="index.html" class="drawer-link">Home</a>
             <a href="home2.html" class="drawer-link">Home 2</a>
-            <a href="cigars.html" class="drawer-link">Cigars</a>
+            <a href="cigars.html" class="drawer-link active">Cigars</a>
             <a href="accessories.html" class="drawer-link">Accessories</a>
+            <a href="blog.html" class="drawer-link">Blog</a>
             <a href="membership.html" class="drawer-link">Membership</a>
             <a href="events.html" class="drawer-link">Events</a>
-            <a href="blog.html" class="drawer-link">Blog</a>
             <a href="contact.html" class="drawer-link">Contact</a>
-            <a href="login.html" class="drawer-link">Login</a>
+            <a href="login.html" class="btn login-btn" style="margin-top: 10px;">Login</a>
         </div>
         <div class="drawer-footer">
             <button class="theme-toggle"><i class="ph ph-moon"></i></button>
@@ -278,7 +281,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Pickup Reservation Section -->
         <section id="pickup-reservation" style="background: var(--surface); padding: 80px 0;">
             <div class="container">
@@ -286,24 +289,32 @@
                     <h2>Your Pickup Order (<span class="cart-count">0</span> items)</h2>
                     <p>Complete your reservation below. We'll have your selection ready at the lounge.</p>
                 </div>
-                <div style="max-width: 800px; margin: 0 auto; background: var(--bg); padding: 40px; border-radius: var(--radius); border: 1px solid var(--border);">
-                    <div id="cartItems" style="margin-bottom: 30px; border-bottom: 1px solid var(--border); padding-bottom: 20px;">
+                <div
+                    style="max-width: 800px; margin: 0 auto; background: var(--bg); padding: 40px; border-radius: var(--radius); border: 1px solid var(--border);">
+                    <div id="cartItems"
+                        style="margin-bottom: 30px; border-bottom: 1px solid var(--border); padding-bottom: 20px;">
                         <!-- Cart items will appear here -->
                     </div>
                     <form id="pickupForm">
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
                             <div class="form-group">
                                 <label style="display: block; margin-bottom: 8px; font-weight: 600;">Full Name *</label>
-                                <input type="text" placeholder="John Doe" required style="width: 100%; padding: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">
+                                <input type="text" placeholder="John Doe" required
+                                    style="width: 100%; padding: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">
                             </div>
                             <div class="form-group">
-                                <label style="display: block; margin-bottom: 8px; font-weight: 600;">Phone Number *</label>
-                                <input type="tel" placeholder="(555) 000-0000" required style="width: 100%; padding: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600;">Phone Number
+                                    *</label>
+                                <input type="tel" placeholder="(555) 000-0000" required
+                                    style="width: 100%; padding: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">
                             </div>
                         </div>
                         <div class="form-group" style="margin-top: 20px;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">Preferred Pickup Time *</label>
-                            <select required style="width: 100%; padding: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">Preferred Pickup Time
+                                *</label>
+                            <select required
+                                style="width: 100%; padding: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">
                                 <option value="">Select a time slot</option>
                                 <option>Today, 2:00 PM - 4:00 PM</option>
                                 <option>Today, 4:00 PM - 6:00 PM</option>
@@ -311,7 +322,8 @@
                                 <option>Tomorrow, 10:00 AM - 12:00 PM</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 30px;">Confirm Reservation</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 30px;">Confirm
+                            Reservation</button>
                     </form>
                 </div>
             </div>
@@ -344,6 +356,7 @@
                         <li><i class="ph ph-map-pin"></i> 123 Cedar Street, Bourbon Heights</li>
                         <li><i class="ph ph-phone"></i> (555) 123-4567</li>
                         <li><i class="ph ph-envelope"></i> lounge@smokey.com</li>
+                        <li><i class="ph ph-clock"></i> Mon-Sun: 10AM - 12AM</li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -359,11 +372,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p style="font-size: 14px; color: #888888;">&copy; 2026 Smokey Cigar Lounge. All rights reserved.</p>
+                <p style="font-size: 14px; color: #888888;">&copy; 2026 Smokey Cigar Lounge. All rights reserved. | <a
+                        href="#">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
-
     <script src="assets/js/main.js"></script>
     <script>
         // Pickup Cart Logic
@@ -384,7 +397,7 @@
                 const originalText = btn.innerText;
                 btn.innerText = 'Added!';
                 btn.style.background = '#28a745';
-                
+
                 // Scroll to pickup section for better UX
                 document.getElementById('pickup-reservation').scrollIntoView({ behavior: 'smooth' });
 
