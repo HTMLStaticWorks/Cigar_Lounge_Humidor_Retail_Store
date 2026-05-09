@@ -372,6 +372,119 @@ section {
     margin-bottom: 60px;
 }
 
+.lounge-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.tri-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+    gap: 30px;
+}
+
+.event-card {
+    flex-direction: row !important;
+    text-align: left !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Split Hero (Home 2) */
+.split-hero {
+    padding: 0;
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+    .split-hero {
+        min-height: 600px;
+        height: 600px;
+    }
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 10%;
+    background: var(--bg);
+}
+
+.hero-content h1 {
+    text-align: center;
+    font-size: clamp(32px, 6vw, 64px);
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.hero-content p {
+    text-align: center;
+    margin: 0 0 40px 0;
+    font-size: 22px;
+    max-width: 500px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+    background-color: var(--bg);
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    right: 60px;
+    bottom: 60px;
+    background: url('../images/split-hero-lounge.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
 /* Footer */
 footer {
     background-color: var(--footer-bg);
@@ -413,9 +526,59 @@ footer {
     }
 }
 
+@media (max-width: 1023px) {
+    .tri-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tri-grid .card:nth-child(3) {
+        grid-column: 1 / span 2;
+        justify-self: center;
+        width: calc(50% - 15px);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .split-hero {
+        flex-direction: column;
+        min-height: auto;
+        height: auto;
+    }
+    
+    .hero-content {
+        padding: 120px 20px 60px;
+        text-align: center;
+        align-items: center;
+        order: 1;
+    }
+    
+    .hero-content h1, .hero-content p {
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+    }
+    
+    .hero-image {
+        min-height: 400px;
+        order: 2;
+    }
+
+    .hero-image::after {
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
     }
 }
 
@@ -426,5 +589,76 @@ footer {
     }
     .footer-col h4 {
         text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .tri-grid {
+        grid-template-columns: 1fr;
+    }
+    .tri-grid .card:nth-child(3) {
+        grid-column: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .lounge-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .lounge-grid .animate-on-scroll {
+        order: 1;
+    }
+    
+    .lounge-grid .image-stack {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    .lounge-grid h2, 
+    .lounge-grid p {
+        text-align: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Target the inline height for highlight cards */
+    .highlight-card {
+        height: 350px !important;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-card {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    .event-card > div {
+        width: 100% !important;
+        min-width: 100% !important;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-card h3, 
+    .event-card p {
+        text-align: center !important;
     }
 }

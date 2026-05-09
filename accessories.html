@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smokey | Premium Accessories</title>
-    
+
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
-    
+
     <style>
         .category-tabs {
             display: flex;
@@ -21,6 +22,7 @@
             overflow-x: auto;
             padding-bottom: 10px;
         }
+
         .tab-btn {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -33,13 +35,31 @@
             cursor: pointer;
             transition: var(--transition);
         }
-        .tab-btn.active, .tab-btn:hover {
+
+        .tab-btn.active,
+        .tab-btn:hover {
             background: var(--accent);
             color: var(--black);
             border-color: var(--accent);
         }
+
+        @media (max-width: 768px) {
+            .category-tabs {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 30px;
+            }
+            .tab-btn {
+                padding: 8px 18px;
+                font-size: 13px;
+                flex: 1 1 auto;
+                text-align: center;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -107,43 +127,96 @@
                 </div>
 
                 <!-- Product Grid -->
-                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="card-grid product-grid">
                     <!-- Accessory 1 -->
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1621644783321-4ba29c016e7f?q=80&w=600" alt="Cutter" style="height: 250px; width: 100%; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
-                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Xikar | Cutters</span>
-                        <h3>Xikar Xi3 Damascus</h3>
-                        <p style="font-size: 15px;">Precision-forged Damascus steel with a mirror finish.</p>
-                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$349.00</div>
-                        <button class="btn btn-primary" style="width: 100%;">Add to Pickup Cart</button>
+                    <div class="card" style="padding: 0; overflow: hidden;">
+                        <img src="assets/images/xikar-xi3-damascus.jpg" alt="Xikar Xi3 Damascus"
+                            style="height: 250px; width: 100%; object-fit: cover; object-position: center; display: block;">
+                        <div style="padding: 25px;">
+                            <span
+                                style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Xikar
+                                | Cutters</span>
+                            <h3>Xikar Xi3 Damascus</h3>
+                            <p style="font-size: 15px;">Precision-forged Damascus steel with a mirror finish.</p>
+                            <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">
+                                $349.00</div>
+                            <button class="btn btn-primary" style="width: 100%;">Add to Pickup Cart</button>
+                        </div>
                     </div>
                     <!-- Accessory 2 -->
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1542451313-0752ee2fe83d?q=80&w=600" alt="Lighter" style="height: 250px; width: 100%; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
-                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">S.T. Dupont | Lighters</span>
-                        <h3>Ligne 2 Gold Plated</h3>
-                        <p style="font-size: 15px;">The iconic 'cling' sound. Timeless French craftsmanship.</p>
-                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$895.00</div>
-                        <button class="btn btn-primary" style="width: 100%;">Add to Pickup Cart</button>
+                    <div class="card" style="padding: 0; overflow: hidden;">
+                        <img src="assets/images/dupont-ligne2-gold.jpg" alt="S.T. Dupont Ligne 2"
+                            style="height: 250px; width: 100%; object-fit: cover; object-position: center; display: block;">
+                        <div style="padding: 25px;">
+                            <span
+                                style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">S.T.
+                                Dupont | Lighters</span>
+                            <h3>Ligne 2 Gold Plated</h3>
+                            <p style="font-size: 15px;">The iconic 'cling' sound. Timeless French craftsmanship.</p>
+                            <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">
+                                $895.00</div>
+                            <button class="btn btn-primary" style="width: 100%;">Add to Pickup Cart</button>
+                        </div>
                     </div>
                     <!-- Accessory 3 -->
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1595113316349-9fa4ee24f884?q=80&w=600" alt="Humidor" style="height: 250px; width: 100%; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
-                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Elie Bleu | Humidors</span>
-                        <h3>Medalist Sycamore 110</h3>
-                        <p style="font-size: 15px;">Spanish cedar interior. Masterpiece of French joinery.</p>
-                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$2,450.00</div>
-                        <button class="btn btn-primary" style="width: 100%;">Add to Pickup Cart</button>
+                    <div class="card" style="padding: 0; overflow: hidden;">
+                        <img src="assets/images/elie-bleu-sycamore-humidor.jpg" alt="Elie Bleu Medalist Sycamore"
+                            style="height: 250px; width: 100%; object-fit: cover; object-position: center; display: block;">
+                        <div style="padding: 25px;">
+                            <span
+                                style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Elie
+                                Bleu | Humidors</span>
+                            <h3>Medalist Sycamore 110</h3>
+                            <p style="font-size: 15px;">Spanish cedar interior. Masterpiece of French joinery.</p>
+                            <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">
+                                $2,450.00</div>
+                            <button class="btn btn-primary" style="width: 100%;">Add to Pickup Cart</button>
+                        </div>
                     </div>
                     <!-- Accessory 4 -->
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1598006520336-39f5c490892f?q=80&w=600" alt="Ashtray" style="height: 250px; width: 100%; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px;">
-                        <span style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Colibri | Ashtrays</span>
-                        <h3>Colibri Quasar Crystal</h3>
-                        <p style="font-size: 15px;">Lead-free crystal. Modern geometric design.</p>
-                        <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">$125.00</div>
-                        <button class="btn btn-primary" style="width: 100%;">Add to Pickup Cart</button>
+                    <div class="card" style="padding: 0; overflow: hidden;">
+                        <img src="assets/images/colibri-quasar-crystal.jpg" alt="Colibri Quasar Crystal"
+                            style="height: 250px; width: 100%; object-fit: cover; object-position: center; display: block;">
+                        <div style="padding: 25px;">
+                            <span
+                                style="font-size: 12px; text-transform: uppercase; color: var(--accent); font-weight: 700;">Colibri
+                                | Ashtrays</span>
+                            <h3>Colibri Quasar Crystal</h3>
+                            <p style="font-size: 15px;">Lead-free crystal. Modern geometric design.</p>
+                            <div style="font-size: 24px; font-weight: 700; color: var(--accent); margin-bottom: 20px;">
+                                $125.00</div>
+                            <button class="btn btn-primary" style="width: 100%;">Add to Pickup Cart</button>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section style="padding: 80px 0; background: var(--bg);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Everything you need to know about our premium accessories.</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item"
+                        style="margin-bottom: 30px; border-bottom: 1px solid var(--border); padding-bottom: 20px;">
+                        <h3 style="text-align: left; font-size: 20px; margin-bottom: 10px; color: var(--accent);">Do you
+                            offer warranties on lighters and cutters?</h3>
+                        <p style="text-align: left; font-size: 16px; color: #888;">Yes, all our premium brands like S.T.
+                            Dupont and Xikar come with their respective manufacturer warranties. We also provide
+                            in-store assistance for any maintenance needs.</p>
+                    </div>
+                    <div class="faq-item"
+                        style="margin-bottom: 30px; border-bottom: 1px solid var(--border); padding-bottom: 20px;">
+                        <h3 style="text-align: left; font-size: 20px; margin-bottom: 10px; color: var(--accent);">Can I
+                            have my humidor seasoned before pickup?</h3>
+                        <p style="text-align: left; font-size: 16px; color: #888;">Absolutely. If you purchase a humidor
+                            for local pickup, our experts can pre-season it for you upon request so it's ready for
+                            immediate use when you arrive.</p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -155,7 +228,9 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">SMOKEY</a>
-                    <p style="text-align: left; margin: 0; font-size: 16px; color: #CCCCCC;">A premier destination for cigar enthusiasts, offering a curated selection of premium tobacco and a luxury lounge experience.</p>
+                    <p style="text-align: left; margin: 0; font-size: 16px; color: #CCCCCC;">A premier destination for
+                        cigar enthusiasts, offering a curated selection of premium tobacco and a luxury lounge
+                        experience.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -176,10 +251,13 @@
                 </div>
                 <div class="footer-col">
                     <h4>Newsletter</h4>
-                    <p style="text-align: left; margin: 0; font-size: 14px; color: #CCCCCC; margin-bottom: 15px;">Subscribe for exclusive event invites and new arrivals.</p>
+                    <p style="text-align: left; margin: 0; font-size: 14px; color: #CCCCCC; margin-bottom: 15px;">
+                        Subscribe for exclusive event invites and new arrivals.</p>
                     <form style="display: flex; gap: 10px;">
-                        <input type="email" placeholder="Your Email" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #FFFFFF; padding: 10px; border-radius: var(--radius); flex-grow: 1;">
-                        <button class="btn btn-primary" style="padding: 10px 15px;"><i class="ph ph-paper-plane-right"></i></button>
+                        <input type="email" placeholder="Your Email" required
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #FFFFFF; padding: 10px; border-radius: var(--radius); flex-grow: 1;">
+                        <button class="btn btn-primary" style="padding: 10px 15px;"><i
+                                class="ph ph-paper-plane-right"></i></button>
                     </form>
                 </div>
             </div>
@@ -201,4 +279,5 @@
         });
     </script>
 </body>
+
 </html>

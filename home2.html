@@ -69,31 +69,24 @@
 
     <main>
         <!-- Split Hero Section -->
-        <section class="split-hero"
-            style="padding: 0; min-height: 100vh; display: flex; align-items: stretch; overflow: hidden;">
-            <div class="hero-content"
-                style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 100px 10%; background: var(--bg);">
+        <section class="split-hero">
+            <div class="hero-content">
                 <div class="animate-on-scroll">
-                    <h1
-                        style="text-align: left; font-size: clamp(32px, 6vw, 64px); line-height: 1.1; margin-bottom: 30px;">
-                        Refining the <br><span style="color: var(--accent);">Ritual of Relaxation</span></h1>
-                    <p style="text-align: left; margin: 0 0 40px 0; font-size: 22px; max-width: 500px;">A private club
-                        atmosphere designed for those who appreciate the finer details of life.</p>
-                    <div style="display: flex; gap: 20px;">
+                    <h1>Refining the <br><span style="color: var(--accent);">Ritual of Relaxation</span></h1>
+                    <p>A private club atmosphere designed for those who appreciate the finer details of life.</p>
+                    <div class="hero-actions">
                         <a href="membership.html" class="btn btn-primary">Join the Elite</a>
                         <a href="cigars.html" class="btn btn-outline">Browse Humidor</a>
                     </div>
                 </div>
             </div>
-            <div class="hero-image"
-                style="flex: 1; background: url('assets/images/split-hero-lounge.jpg'); background-size: cover; background-position: center;">
-            </div>
+            <div class="hero-image"></div>
         </section>
 
         <!-- Stats Section (New for Home 2) -->
         <section style="background: var(--surface); padding: 60px 0;">
             <div class="container">
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: center;">
+                <div class="stats-grid">
                     <div>
                         <div
                             style="font-family: var(--font-heading); font-size: 48px; color: var(--accent); font-weight: 700;">
@@ -132,15 +125,15 @@
                     <h2>The Humidor Selection</h2>
                     <p>Curated by our resident connoisseurs for the most discerning palates.</p>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
+                <div class="highlights-grid">
                     <div class="highlight-card"
                         style="position: relative; overflow: hidden; border-radius: var(--radius); height: 500px;">
                         <img src="assets/images/nicaraguan-blends-highlight.jpg"
                             style="width: 100%; height: 100%; object-fit: cover;">
                         <div
-                            style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: #FFFFFF;">
-                            <h3 style="text-align: left; color: #FFFFFF;">Rare Nicaraguan Blends</h3>
-                            <p style="text-align: left; color: #CCCCCC; margin: 10px 0 20px 0;">Exclusive small-batch
+                            style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: #FFFFFF; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                            <h3 style="color: #FFFFFF; margin-bottom: 10px;">Rare Nicaraguan Blends</h3>
+                            <p style="color: #CCCCCC; margin: 0 0 20px 0; max-width: 400px;">Exclusive small-batch
                                 arrivals from the valley of Estelí.</p>
                             <a href="cigars.html" class="btn btn-primary" style="padding: 8px 20px;">Explore</a>
                         </div>
@@ -150,9 +143,9 @@
                         <img src="assets/images/accessories-highlight.jpg"
                             style="width: 100%; height: 100%; object-fit: cover;">
                         <div
-                            style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: #FFFFFF;">
-                            <h3 style="text-align: left; color: #FFFFFF;">Premium Accessories</h3>
-                            <p style="text-align: left; color: #CCCCCC; margin: 10px 0 20px 0;">Handcrafted cutters and
+                            style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: #FFFFFF; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                            <h3 style="color: #FFFFFF; margin-bottom: 10px;">Premium Accessories</h3>
+                            <p style="color: #CCCCCC; margin: 0 0 20px 0; max-width: 400px;">Handcrafted cutters and
                                 lighters that define luxury.</p>
                             <a href="accessories.html" class="btn btn-primary" style="padding: 8px 20px;">Shop Now</a>
                         </div>
